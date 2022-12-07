@@ -97,6 +97,13 @@ Partial Class Form_meansure
         Me.MouseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisableDoubleClickToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisableLeftButtonDragToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ColorChannelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BlueToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GrayToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CODEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RGBToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpHToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutMATTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Splitter1 = New System.Windows.Forms.Splitter()
@@ -500,13 +507,13 @@ Partial Class Form_meansure
         Me.GeneralToolStripMenuItem.Checked = True
         Me.GeneralToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.GeneralToolStripMenuItem.Name = "GeneralToolStripMenuItem"
-        Me.GeneralToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.GeneralToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.GeneralToolStripMenuItem.Text = "Standard"
         '
         'KaryotypeToolStripMenuItem
         '
         Me.KaryotypeToolStripMenuItem.Name = "KaryotypeToolStripMenuItem"
-        Me.KaryotypeToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.KaryotypeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.KaryotypeToolStripMenuItem.Text = "Karyotype"
         '
         'ToolsAToolStripMenuItem
@@ -541,7 +548,7 @@ Partial Class Form_meansure
         '
         'ViewWToolStripMenuItem
         '
-        Me.ViewWToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowSToolStripMenuItem, Me.ColorCToolStripMenuItem, Me.MouseToolStripMenuItem})
+        Me.ViewWToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowSToolStripMenuItem, Me.ColorCToolStripMenuItem, Me.MouseToolStripMenuItem, Me.ColorChannelToolStripMenuItem})
         Me.ViewWToolStripMenuItem.Name = "ViewWToolStripMenuItem"
         Me.ViewWToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
         Me.ViewWToolStripMenuItem.Text = "Option(&O)"
@@ -550,14 +557,14 @@ Partial Class Form_meansure
         '
         Me.ShowSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GroupToolStripMenuItem1, Me.ScaleAxisToolStripMenuItem, Me.LineLengthToolStripMenuItem, Me.CoordinatesToolStripMenuItem, Me.NodeIDToolStripMenuItem})
         Me.ShowSToolStripMenuItem.Name = "ShowSToolStripMenuItem"
-        Me.ShowSToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ShowSToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ShowSToolStripMenuItem.Text = "Show(&S)"
         '
         'GroupToolStripMenuItem1
         '
         Me.GroupToolStripMenuItem1.CheckOnClick = True
         Me.GroupToolStripMenuItem1.Name = "GroupToolStripMenuItem1"
-        Me.GroupToolStripMenuItem1.Size = New System.Drawing.Size(143, 22)
+        Me.GroupToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.GroupToolStripMenuItem1.Text = "Group"
         '
         'ScaleAxisToolStripMenuItem
@@ -566,14 +573,14 @@ Partial Class Form_meansure
         Me.ScaleAxisToolStripMenuItem.CheckOnClick = True
         Me.ScaleAxisToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ScaleAxisToolStripMenuItem.Name = "ScaleAxisToolStripMenuItem"
-        Me.ScaleAxisToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.ScaleAxisToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ScaleAxisToolStripMenuItem.Text = "Scale Axis"
         '
         'LineLengthToolStripMenuItem
         '
         Me.LineLengthToolStripMenuItem.CheckOnClick = True
         Me.LineLengthToolStripMenuItem.Name = "LineLengthToolStripMenuItem"
-        Me.LineLengthToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.LineLengthToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.LineLengthToolStripMenuItem.Text = "Line Length"
         '
         'CoordinatesToolStripMenuItem
@@ -582,80 +589,80 @@ Partial Class Form_meansure
         Me.CoordinatesToolStripMenuItem.CheckOnClick = True
         Me.CoordinatesToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CoordinatesToolStripMenuItem.Name = "CoordinatesToolStripMenuItem"
-        Me.CoordinatesToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.CoordinatesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CoordinatesToolStripMenuItem.Text = "Coordinates"
         '
         'NodeIDToolStripMenuItem
         '
         Me.NodeIDToolStripMenuItem.CheckOnClick = True
         Me.NodeIDToolStripMenuItem.Name = "NodeIDToolStripMenuItem"
-        Me.NodeIDToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.NodeIDToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.NodeIDToolStripMenuItem.Text = "Node ID"
         '
         'ColorCToolStripMenuItem
         '
         Me.ColorCToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LineColorToolStripMenuItem1, Me.FontColorToolStripMenuItem, Me.PointColorToolStripMenuItem, Me.ScaleColorToolStripMenuItem, Me.ToolStripSeparator2, Me.LineColorToolStripMenuItem, Me.ShortArmColorToolStripMenuItem, Me.ToolStripSeparator3, Me.NodeSizeToolStripMenuItem})
         Me.ColorCToolStripMenuItem.Name = "ColorCToolStripMenuItem"
-        Me.ColorCToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ColorCToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ColorCToolStripMenuItem.Text = "Color && Size(&C)"
         '
         'LineColorToolStripMenuItem1
         '
         Me.LineColorToolStripMenuItem1.Name = "LineColorToolStripMenuItem1"
-        Me.LineColorToolStripMenuItem1.Size = New System.Drawing.Size(171, 22)
+        Me.LineColorToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.LineColorToolStripMenuItem1.Text = "Line Color"
         '
         'FontColorToolStripMenuItem
         '
         Me.FontColorToolStripMenuItem.Name = "FontColorToolStripMenuItem"
-        Me.FontColorToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.FontColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.FontColorToolStripMenuItem.Text = "Font Color"
         '
         'PointColorToolStripMenuItem
         '
         Me.PointColorToolStripMenuItem.Name = "PointColorToolStripMenuItem"
-        Me.PointColorToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.PointColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PointColorToolStripMenuItem.Text = "Point Color"
         '
         'ScaleColorToolStripMenuItem
         '
         Me.ScaleColorToolStripMenuItem.Name = "ScaleColorToolStripMenuItem"
-        Me.ScaleColorToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ScaleColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ScaleColorToolStripMenuItem.Text = "Scale Color"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(168, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
         '
         'LineColorToolStripMenuItem
         '
         Me.LineColorToolStripMenuItem.Name = "LineColorToolStripMenuItem"
-        Me.LineColorToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.LineColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.LineColorToolStripMenuItem.Text = "Segment Color 1"
         '
         'ShortArmColorToolStripMenuItem
         '
         Me.ShortArmColorToolStripMenuItem.Name = "ShortArmColorToolStripMenuItem"
-        Me.ShortArmColorToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ShortArmColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ShortArmColorToolStripMenuItem.Text = "Segment Color 2"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(168, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(177, 6)
         '
         'NodeSizeToolStripMenuItem
         '
         Me.NodeSizeToolStripMenuItem.Name = "NodeSizeToolStripMenuItem"
-        Me.NodeSizeToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.NodeSizeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.NodeSizeToolStripMenuItem.Text = "Node Size"
         '
         'MouseToolStripMenuItem
         '
         Me.MouseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DisableDoubleClickToolStripMenuItem, Me.DisableLeftButtonDragToolStripMenuItem})
         Me.MouseToolStripMenuItem.Name = "MouseToolStripMenuItem"
-        Me.MouseToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.MouseToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MouseToolStripMenuItem.Text = "Mouse(&M)"
         '
         'DisableDoubleClickToolStripMenuItem
@@ -672,6 +679,51 @@ Partial Class Form_meansure
         Me.DisableLeftButtonDragToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
         Me.DisableLeftButtonDragToolStripMenuItem.Text = "Disable left button drag"
         '
+        'ColorChannelToolStripMenuItem
+        '
+        Me.ColorChannelToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RedToolStripMenuItem, Me.GreenToolStripMenuItem, Me.BlueToolStripMenuItem, Me.GrayToolStripMenuItem, Me.CODEToolStripMenuItem, Me.RGBToolStripMenuItem})
+        Me.ColorChannelToolStripMenuItem.Name = "ColorChannelToolStripMenuItem"
+        Me.ColorChannelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ColorChannelToolStripMenuItem.Text = "Color Channel"
+        '
+        'RedToolStripMenuItem
+        '
+        Me.RedToolStripMenuItem.Name = "RedToolStripMenuItem"
+        Me.RedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RedToolStripMenuItem.Text = "Red"
+        '
+        'GreenToolStripMenuItem
+        '
+        Me.GreenToolStripMenuItem.Name = "GreenToolStripMenuItem"
+        Me.GreenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GreenToolStripMenuItem.Text = "Green"
+        '
+        'BlueToolStripMenuItem
+        '
+        Me.BlueToolStripMenuItem.Name = "BlueToolStripMenuItem"
+        Me.BlueToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BlueToolStripMenuItem.Text = "Blue"
+        '
+        'GrayToolStripMenuItem
+        '
+        Me.GrayToolStripMenuItem.Name = "GrayToolStripMenuItem"
+        Me.GrayToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GrayToolStripMenuItem.Text = "Gray"
+        '
+        'CODEToolStripMenuItem
+        '
+        Me.CODEToolStripMenuItem.Name = "CODEToolStripMenuItem"
+        Me.CODEToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CODEToolStripMenuItem.Text = "CODE"
+        '
+        'RGBToolStripMenuItem
+        '
+        Me.RGBToolStripMenuItem.Checked = True
+        Me.RGBToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.RGBToolStripMenuItem.Name = "RGBToolStripMenuItem"
+        Me.RGBToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RGBToolStripMenuItem.Text = "RGB"
+        '
         'HelpHToolStripMenuItem
         '
         Me.HelpHToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutMATTToolStripMenuItem})
@@ -682,7 +734,7 @@ Partial Class Form_meansure
         'AboutMATTToolStripMenuItem
         '
         Me.AboutMATTToolStripMenuItem.Name = "AboutMATTToolStripMenuItem"
-        Me.AboutMATTToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutMATTToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.AboutMATTToolStripMenuItem.Text = "About MATO"
         '
         'Splitter1
@@ -699,6 +751,8 @@ Partial Class Form_meansure
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SplitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel2
+        Me.SplitContainer1.IsSplitterFixed = True
         Me.SplitContainer1.Location = New System.Drawing.Point(59, 25)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
@@ -709,11 +763,10 @@ Partial Class Form_meansure
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.AutoScroll = True
         Me.SplitContainer1.Panel2.Controls.Add(Me.PictureZoom)
         Me.SplitContainer1.Panel2.Controls.Add(Me.TabControl1)
         Me.SplitContainer1.Size = New System.Drawing.Size(805, 554)
-        Me.SplitContainer1.SplitterDistance = 574
+        Me.SplitContainer1.SplitterDistance = 571
         Me.SplitContainer1.TabIndex = 11
         '
         'Picture
@@ -732,7 +785,7 @@ Partial Class Form_meansure
         '
         Me.PictureZoom.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureZoom.BackColor = System.Drawing.Color.LightGray
-        Me.PictureZoom.Location = New System.Drawing.Point(0, -1)
+        Me.PictureZoom.Location = New System.Drawing.Point(3, -1)
         Me.PictureZoom.Name = "PictureZoom"
         Me.PictureZoom.Size = New System.Drawing.Size(225, 150)
         Me.PictureZoom.TabIndex = 64
@@ -748,7 +801,7 @@ Partial Class Form_meansure
         Me.TabControl1.Location = New System.Drawing.Point(0, 155)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(223, 395)
+        Me.TabControl1.Size = New System.Drawing.Size(226, 395)
         Me.TabControl1.TabIndex = 1
         '
         'TabPage2
@@ -770,7 +823,7 @@ Partial Class Form_meansure
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(215, 366)
+        Me.TabPage2.Size = New System.Drawing.Size(218, 366)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Karyotype"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -968,7 +1021,7 @@ Partial Class Form_meansure
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(215, 369)
+        Me.TabPage1.Size = New System.Drawing.Size(218, 369)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "General"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -977,7 +1030,7 @@ Partial Class Form_meansure
         '
         Me.TextBox9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox9.Location = New System.Drawing.Point(98, 284)
+        Me.TextBox9.Location = New System.Drawing.Point(101, 275)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.ReadOnly = True
         Me.TextBox9.Size = New System.Drawing.Size(114, 22)
@@ -988,7 +1041,7 @@ Partial Class Form_meansure
         Me.TextBox8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox8.BackColor = System.Drawing.Color.Gray
         Me.TextBox8.ForeColor = System.Drawing.Color.White
-        Me.TextBox8.Location = New System.Drawing.Point(158, 339)
+        Me.TextBox8.Location = New System.Drawing.Point(161, 330)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.ReadOnly = True
         Me.TextBox8.Size = New System.Drawing.Size(54, 22)
@@ -999,7 +1052,7 @@ Partial Class Form_meansure
         Me.TextBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox7.BackColor = System.Drawing.Color.Blue
         Me.TextBox7.ForeColor = System.Drawing.Color.White
-        Me.TextBox7.Location = New System.Drawing.Point(98, 339)
+        Me.TextBox7.Location = New System.Drawing.Point(101, 330)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(54, 22)
@@ -1010,7 +1063,7 @@ Partial Class Form_meansure
         Me.TextBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox6.BackColor = System.Drawing.Color.Green
         Me.TextBox6.ForeColor = System.Drawing.Color.White
-        Me.TextBox6.Location = New System.Drawing.Point(158, 312)
+        Me.TextBox6.Location = New System.Drawing.Point(161, 303)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(54, 22)
@@ -1021,7 +1074,7 @@ Partial Class Form_meansure
         Me.TextBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox5.BackColor = System.Drawing.Color.Red
         Me.TextBox5.ForeColor = System.Drawing.Color.White
-        Me.TextBox5.Location = New System.Drawing.Point(98, 311)
+        Me.TextBox5.Location = New System.Drawing.Point(101, 302)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.ReadOnly = True
         Me.TextBox5.Size = New System.Drawing.Size(54, 22)
@@ -1033,16 +1086,16 @@ Partial Class Form_meansure
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Picture_color.BackColor = System.Drawing.Color.LightGray
         Me.Picture_color.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Picture_color.Location = New System.Drawing.Point(3, 285)
+        Me.Picture_color.Location = New System.Drawing.Point(3, 276)
         Me.Picture_color.Name = "Picture_color"
-        Me.Picture_color.Size = New System.Drawing.Size(89, 76)
+        Me.Picture_color.Size = New System.Drawing.Size(92, 76)
         Me.Picture_color.TabIndex = 52
         Me.Picture_color.TabStop = False
         '
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(158, 252)
+        Me.Button4.Location = New System.Drawing.Point(161, 243)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(54, 26)
         Me.Button4.TabIndex = 51
@@ -1053,15 +1106,15 @@ Partial Class Form_meansure
         '
         Me.TextBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox4.Location = New System.Drawing.Point(3, 254)
+        Me.TextBox4.Location = New System.Drawing.Point(3, 245)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(89, 22)
+        Me.TextBox4.Size = New System.Drawing.Size(92, 22)
         Me.TextBox4.TabIndex = 50
         '
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Location = New System.Drawing.Point(98, 252)
+        Me.Button3.Location = New System.Drawing.Point(101, 243)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(54, 26)
         Me.Button3.TabIndex = 49
@@ -1081,7 +1134,7 @@ Partial Class Form_meansure
         Me.ListView2.Location = New System.Drawing.Point(0, 0)
         Me.ListView2.MultiSelect = False
         Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(217, 246)
+        Me.ListView2.Size = New System.Drawing.Size(220, 237)
         Me.ListView2.TabIndex = 48
         Me.ListView2.UseCompatibleStateImageBehavior = False
         Me.ListView2.View = System.Windows.Forms.View.Details
@@ -1265,4 +1318,11 @@ Partial Class Form_meansure
     Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
     Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents PictureZoom As PictureBox
+    Friend WithEvents ColorChannelToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GreenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BlueToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GrayToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CODEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RGBToolStripMenuItem As ToolStripMenuItem
 End Class

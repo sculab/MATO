@@ -321,7 +321,7 @@ Public Class Form_meansure
                 If temp_list.Length = 5 Then
                     my_listview.Items.Add(New ListViewItem(temp_list))
                     points_group(my_listview.Items.Count).points_value_1 = temp_list(1)
-                    points_group(my_listview.Items.Count).points_type_1 = temp_list(2)
+                    points_group(my_listview.Items.Count).points_type_1 = name2type(temp_list(2))
                     points_group(my_listview.Items.Count).points_count_1 = CInt(temp_list(3)) - 1
                     last_count = node_count
                     Dim new_line() As String = temp_list(4).Split(";")
@@ -1125,7 +1125,7 @@ Public Class Form_meansure
                                 Dim angle2 As Single = Math.Atan2((line_point(2).Y - line_point(3).Y), (line_point(2).X - line_point(3).X))
                                 Select Case mode_type
                                     Case 0
-                                        TextBox4.Text = ((Abs(angle1 - angle2) / Math.PI * 180) Mod 180).ToString("F2")
+                                        TextBox4.Text = CSng((Abs(angle1 - angle2) / Math.PI * 180)).ToString("F2")
                                     Case 1
                                         'TextBox1.Text = CInt((Abs(angle1 - angle2) / Math.PI * 180) Mod 180)
                                 End Select
@@ -1557,7 +1557,7 @@ Public Class Form_meansure
         End If
 
     End Sub
-    Public Sub save_point_group_1(ByVal id As Integer, ByVal my_value As Single)
+    Public Sub save_point_group_1(ByVal id As Integer, ByVal my_value As Object)
         points_group(id).points_type_1 = last_type
         points_group(id).points_count_1 = last_count
         points_group(id).points_value_1 = my_value
@@ -1695,7 +1695,10 @@ Public Class Form_meansure
     End Sub
 
     Private Sub Form_main_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+        If SplitContainer1.Width > 574 Then
+            SplitContainer1.SplitterDistance = SplitContainer1.Width - 231
 
+        End If
     End Sub
 
     Private Sub Form_main_Resize(sender As Object, e As EventArgs) Handles Me.Resize
@@ -2011,8 +2014,25 @@ Public Class Form_meansure
                             '简化 sRGB IEC61966-2.1 [gamma=2.20]
                             'Gray = (R ^ 2.2 * 0.2126 + G ^ 2.2 * 0.7152 + B ^ 2.2 * 0.0722) ^ (1 / 2.2)
                             TextBox8.Text = CInt((CInt(Picture_color.BackColor.R) ^ 2.2 * 0.2126 + CInt(Picture_color.BackColor.G) ^ 2.2 * 0.7152 + CInt(Picture_color.BackColor.B) ^ 2.2 * 0.0722) ^ (1 / 2.2))
-                            TextBox4.Text = TextBox8.Text
+                            If RedToolStripMenuItem.Checked Then
+                                TextBox4.Text = TextBox5.Text
+                            End If
+                            If GreenToolStripMenuItem.Checked Then
+                                TextBox4.Text = TextBox6.Text
+                            End If
+                            If BlueToolStripMenuItem.Checked Then
+                                TextBox4.Text = TextBox7.Text
+                            End If
+                            If GrayToolStripMenuItem.Checked Then
+                                TextBox4.Text = TextBox8.Text
+                            End If
                             TextBox9.Text = "#" + DEC_to_HEX(Picture_color.BackColor.R) + DEC_to_HEX(Picture_color.BackColor.G) + DEC_to_HEX(Picture_color.BackColor.B)
+                            If CODEToolStripMenuItem.Checked Then
+                                TextBox4.Text = TextBox9.Text
+                            End If
+                            If RGBToolStripMenuItem.Checked Then
+                                TextBox4.Text = TextBox5.Text + "|" + TextBox6.Text + "|" + TextBox7.Text
+                            End If
                         End If
                     End If
 
@@ -2048,7 +2068,7 @@ Public Class Form_meansure
                         Dim angle2 As Single = Math.Atan2((line_point(2).Y - line_point(3).Y), (line_point(2).X - line_point(3).X))
                         Select Case mode_type
                             Case 0
-                                TextBox4.Text = CInt((Abs(angle1 - angle2) / Math.PI * 180)).ToString("F2")
+                                TextBox4.Text = CSng((Abs(angle1 - angle2) / Math.PI * 180)).ToString("F2")
                             Case 1
                                 'TextBox2.Text = CInt((Abs(angle1 - angle2) / Math.PI * 180) Mod 180)
                                 'TextBox3.Text = 180 - CInt((Abs(angle1 - angle2) / Math.PI * 180) Mod 180)
@@ -2906,9 +2926,13 @@ points_group(j - 1).points_group_2, points_group(j - 1).points_type_2, points_gr
 
             Dim tmp_x As Single = (c2 - c1) / (b1 - b2)
             Dim tmp_y As Single = tmp_x * b1 + c1
+            Try
+                tmp_w = CInt(InputBox("Enter the Width: ", "Width", tmp_w))
+                tmp_h = CInt(InputBox("Enter the Height: ", "Height", tmp_h))
+            Catch ex As Exception
+                Exit Sub
+            End Try
 
-            tmp_w = CInt(InputBox("Enter the Width: ", "Width", tmp_w))
-            tmp_h = CInt(InputBox("Enter the Height: ", "Height", tmp_h))
 
             Dim left_top As Integer = 0
             For i As Integer = 0 To 3
@@ -2931,8 +2955,13 @@ points_group(j - 1).points_group_2, points_group(j - 1).points_type_2, points_gr
 
             node_count = 0
             Init()
-            Picture.Image = PerspectiveTran(current_bmp, AffinePoints0, AffinePoints1)
-            Picture.Size = New Size(current_bmp.Width * zoom_radio, current_bmp.Height * zoom_radio)
+            Try
+                Picture.Image = PerspectiveTran(current_bmp, AffinePoints0, AffinePoints1)
+                Picture.Size = New Size(current_bmp.Width * zoom_radio, current_bmp.Height * zoom_radio)
+            Catch ex As Exception
+                MsgBox("Out of memory. Please reduce the size of the image.")
+            End Try
+
         Else
             MsgBox("You need four points to get perspective transform. Use SIZE tool to make a quadrilateral.")
         End If
@@ -3118,7 +3147,58 @@ points_group(j - 1).points_group_2, points_group(j - 1).points_type_2, points_gr
 
     End Sub
 
-    Private Sub SplitContainer1_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles SplitContainer1.SplitterMoved
+    Private Sub BlueToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BlueToolStripMenuItem.Click
+        RedToolStripMenuItem.Checked = False
+        GreenToolStripMenuItem.Checked = False
+        BlueToolStripMenuItem.Checked = True
+        CODEToolStripMenuItem.Checked = False
+        GrayToolStripMenuItem.Checked = False
+        RGBToolStripMenuItem.Checked = False
 
+    End Sub
+
+    Private Sub GrayToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GrayToolStripMenuItem.Click
+        RedToolStripMenuItem.Checked = False
+        GreenToolStripMenuItem.Checked = False
+        BlueToolStripMenuItem.Checked = False
+        CODEToolStripMenuItem.Checked = False
+        RGBToolStripMenuItem.Checked = False
+        GrayToolStripMenuItem.Checked = True
+    End Sub
+
+    Private Sub GreenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GreenToolStripMenuItem.Click
+        RedToolStripMenuItem.Checked = False
+        GreenToolStripMenuItem.Checked = True
+        BlueToolStripMenuItem.Checked = False
+        CODEToolStripMenuItem.Checked = False
+        RGBToolStripMenuItem.Checked = False
+        GrayToolStripMenuItem.Checked = False
+    End Sub
+
+    Private Sub RedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RedToolStripMenuItem.Click
+        RedToolStripMenuItem.Checked = True
+        GreenToolStripMenuItem.Checked = False
+        BlueToolStripMenuItem.Checked = False
+        GrayToolStripMenuItem.Checked = False
+        RGBToolStripMenuItem.Checked = False
+        CODEToolStripMenuItem.Checked = False
+    End Sub
+
+    Private Sub CODEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CODEToolStripMenuItem.Click
+        RedToolStripMenuItem.Checked = False
+        GreenToolStripMenuItem.Checked = False
+        BlueToolStripMenuItem.Checked = False
+        GrayToolStripMenuItem.Checked = False
+        CODEToolStripMenuItem.Checked = True
+        RGBToolStripMenuItem.Checked = False
+    End Sub
+
+    Private Sub RGBToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RGBToolStripMenuItem.Click
+        RedToolStripMenuItem.Checked = False
+        GreenToolStripMenuItem.Checked = False
+        BlueToolStripMenuItem.Checked = False
+        GrayToolStripMenuItem.Checked = False
+        CODEToolStripMenuItem.Checked = False
+        RGBToolStripMenuItem.Checked = True
     End Sub
 End Class

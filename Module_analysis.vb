@@ -28,6 +28,8 @@
                     a(j) = (i - 1) * 2 + j
                     d(j) = longarm(r(j)) / (shortarm(r(j)) + 0.0001) / summod * radio_div_len
                     s(j) = (longarm(r(j)) + shortarm(r(j))) / sumarm
+
+
                     rangenum(j) = j
                 Next
                 rangex(1) = ((d(1) - d(2)) ^ 2 + (s(1) - s(2)) ^ 2) ^ 0.5 + ((d(3) - d(4)) ^ 2 + (s(3) - s(4)) ^ 2) ^ 0.5
@@ -76,7 +78,8 @@
                         j = i - bchrom - suichrom
                         tempsum(j) = (longarm(i) + shortarm(i)) / sumarm
                         tempdiv(j) = longarm(i) / (shortarm(i) + 0.0001) / summod * radio_div_len
-                        temparm(j) = (tempsum(j) ^ 2 + tempdiv(j) ^ 2) ^ 0.5
+                        'temparm(j) = (tempsum(j) ^ 2 + tempdiv(j) ^ 2) ^ 0.5
+                        temparm(j) = (longarm(j) ^ 2 + shortarm(j) ^ 2) ^ 0.5
                         temprange(j) = data_id(i)
                         temprange1(j) = data_id(i)
 
@@ -106,7 +109,8 @@
                     j = i - bchrom
                     tempsum(j) = (longarm(i) + shortarm(i)) / sumarm
                     tempdiv(j) = longarm(i) / (shortarm(i) + 0.0001) / summod * radio_div_len
-                    temparm(j) = (tempsum(j) ^ 2 + tempdiv(j) ^ 2) ^ 0.5
+                    'temparm(j) = (tempsum(j) ^ 2 + tempdiv(j) ^ 2) ^ 0.5
+                    temparm(j) = (longarm(j) ^ 2 + shortarm(j) ^ 2) ^ 0.5
                     temprange(j) = data_id(i)
                     temprange1(j) = data_id(i)
                     temp(j) = data_id(i)
@@ -125,7 +129,7 @@
 
             For i As Integer = 1 To data_count / times
                 '获取离原点最近的染色体
-                Array.Sort(temparm, temprange, 1, data_count, upper)
+                Array.Sort(temparm, temprange, 1, data_count, Descending)
                 Array.Sort(temparm, temprange, 1, data_count - (i - 1) * times)
                 armid = temprange(1)
                 Range(1 + (i - 1) * times) = armid
@@ -192,7 +196,7 @@
 
             For i As Integer = 1 To data_count / times
                 '获取离原点最近的染色体
-                Array.Sort(temparm, temprange, 1, data_count, upper)
+                Array.Sort(temparm, temprange, 1, data_count, Descending)
                 Array.Sort(temparm, temprange, 1, data_count - (i - 1) * times)
                 armid = temprange(1)
                 Range(1 + (i - 1) * times) = armid

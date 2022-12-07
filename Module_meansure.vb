@@ -88,7 +88,8 @@ Module Module_meansure
     Public scale_title As String = ""
     Public scale_unit As String = "px"
 
-    Public upper As Object = New myReverserClass
+    Public Ascending As Object = New myAscendingClass
+    Public Descending As Object = New myDescendingClass
     Public chtype(512) As String
     Public sat(6) As Integer
     Public typenum(6) As Integer
@@ -207,7 +208,17 @@ erh:
 erh:
         rem_fa = False
     End Function
-    Public Class myReverserClass
+    Public Class myAscendingClass
+        Implements IComparer
+        ' Calls CaseInsensitiveComparer.Compare with the parameters reversed.
+        Function Compare(ByVal x As [Object], ByVal y As [Object]) As Integer _
+           Implements IComparer.Compare
+            Return New CaseInsensitiveComparer().Compare(x, y)
+        End Function 'IComparer.Compare
+
+    End Class 'myAscendingClass
+
+    Public Class myDescendingClass
         Implements IComparer
         ' Calls CaseInsensitiveComparer.Compare with the parameters reversed.
         Function Compare(ByVal x As [Object], ByVal y As [Object]) As Integer _
@@ -215,7 +226,8 @@ erh:
             Return New CaseInsensitiveComparer().Compare(y, x)
         End Function 'IComparer.Compare
 
-    End Class 'myReverserClass
+    End Class 'myDescendingClass
+
     Public Sub ChromType(ByVal chromdiv As Single, ByVal k As Integer)
         If chromdiv <= 1.01 Then
             chtype(k) = "M"
@@ -343,13 +355,13 @@ erh:
 
             Next
         Next
-        Array.Sort(armsumx, Range, 1, data_count - bchrom, upper)
+        Array.Sort(armsumx, Range, 1, data_count - bchrom, Descending)
         For k As Integer = 1 To (data_count - bchrom) / times
             For i As Integer = 1 To times
                 armsumx1(i) = longarm(Range((k - 1) * times + i)) + shortarm(Range((k - 1) * times + i))
                 Rangex(i) = Range((k - 1) * times + i)
             Next
-            Array.Sort(armsumx1, Rangex, 1, times, upper)
+            Array.Sort(armsumx1, Rangex, 1, times, Descending)
             For i As Integer = 1 To times
                 Range((k - 1) * times + i) = Rangex(i)
             Next
