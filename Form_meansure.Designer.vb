@@ -22,6 +22,7 @@ Partial Class Form_meansure
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_meansure))
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -147,6 +148,8 @@ Partial Class Form_meansure
         Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.InsertToToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -159,6 +162,7 @@ Partial Class Form_meansure
         Me.TabPage2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.Picture_color, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ColorDialog1
@@ -507,13 +511,13 @@ Partial Class Form_meansure
         Me.GeneralToolStripMenuItem.Checked = True
         Me.GeneralToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.GeneralToolStripMenuItem.Name = "GeneralToolStripMenuItem"
-        Me.GeneralToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GeneralToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.GeneralToolStripMenuItem.Text = "Standard"
         '
         'KaryotypeToolStripMenuItem
         '
         Me.KaryotypeToolStripMenuItem.Name = "KaryotypeToolStripMenuItem"
-        Me.KaryotypeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.KaryotypeToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.KaryotypeToolStripMenuItem.Text = "Karyotype"
         '
         'ToolsAToolStripMenuItem
@@ -526,24 +530,24 @@ Partial Class Form_meansure
         'GroupToolStripMenuItem
         '
         Me.GroupToolStripMenuItem.Name = "GroupToolStripMenuItem"
-        Me.GroupToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GroupToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.GroupToolStripMenuItem.Text = "Group"
         '
         'ScalesToolStripMenuItem
         '
         Me.ScalesToolStripMenuItem.Name = "ScalesToolStripMenuItem"
-        Me.ScalesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ScalesToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.ScalesToolStripMenuItem.Text = "Scales"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(170, 6)
         '
         'CombineResultsToolStripMenuItem
         '
         Me.CombineResultsToolStripMenuItem.Name = "CombineResultsToolStripMenuItem"
-        Me.CombineResultsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CombineResultsToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.CombineResultsToolStripMenuItem.Text = "Combine Results"
         '
         'ViewWToolStripMenuItem
@@ -557,14 +561,14 @@ Partial Class Form_meansure
         '
         Me.ShowSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GroupToolStripMenuItem1, Me.ScaleAxisToolStripMenuItem, Me.LineLengthToolStripMenuItem, Me.CoordinatesToolStripMenuItem, Me.NodeIDToolStripMenuItem})
         Me.ShowSToolStripMenuItem.Name = "ShowSToolStripMenuItem"
-        Me.ShowSToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ShowSToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ShowSToolStripMenuItem.Text = "Show(&S)"
         '
         'GroupToolStripMenuItem1
         '
         Me.GroupToolStripMenuItem1.CheckOnClick = True
         Me.GroupToolStripMenuItem1.Name = "GroupToolStripMenuItem1"
-        Me.GroupToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.GroupToolStripMenuItem1.Size = New System.Drawing.Size(143, 22)
         Me.GroupToolStripMenuItem1.Text = "Group"
         '
         'ScaleAxisToolStripMenuItem
@@ -573,14 +577,14 @@ Partial Class Form_meansure
         Me.ScaleAxisToolStripMenuItem.CheckOnClick = True
         Me.ScaleAxisToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ScaleAxisToolStripMenuItem.Name = "ScaleAxisToolStripMenuItem"
-        Me.ScaleAxisToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ScaleAxisToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.ScaleAxisToolStripMenuItem.Text = "Scale Axis"
         '
         'LineLengthToolStripMenuItem
         '
         Me.LineLengthToolStripMenuItem.CheckOnClick = True
         Me.LineLengthToolStripMenuItem.Name = "LineLengthToolStripMenuItem"
-        Me.LineLengthToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LineLengthToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.LineLengthToolStripMenuItem.Text = "Line Length"
         '
         'CoordinatesToolStripMenuItem
@@ -589,80 +593,80 @@ Partial Class Form_meansure
         Me.CoordinatesToolStripMenuItem.CheckOnClick = True
         Me.CoordinatesToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CoordinatesToolStripMenuItem.Name = "CoordinatesToolStripMenuItem"
-        Me.CoordinatesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CoordinatesToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.CoordinatesToolStripMenuItem.Text = "Coordinates"
         '
         'NodeIDToolStripMenuItem
         '
         Me.NodeIDToolStripMenuItem.CheckOnClick = True
         Me.NodeIDToolStripMenuItem.Name = "NodeIDToolStripMenuItem"
-        Me.NodeIDToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NodeIDToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.NodeIDToolStripMenuItem.Text = "Node ID"
         '
         'ColorCToolStripMenuItem
         '
         Me.ColorCToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LineColorToolStripMenuItem1, Me.FontColorToolStripMenuItem, Me.PointColorToolStripMenuItem, Me.ScaleColorToolStripMenuItem, Me.ToolStripSeparator2, Me.LineColorToolStripMenuItem, Me.ShortArmColorToolStripMenuItem, Me.ToolStripSeparator3, Me.NodeSizeToolStripMenuItem})
         Me.ColorCToolStripMenuItem.Name = "ColorCToolStripMenuItem"
-        Me.ColorCToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ColorCToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ColorCToolStripMenuItem.Text = "Color && Size(&C)"
         '
         'LineColorToolStripMenuItem1
         '
         Me.LineColorToolStripMenuItem1.Name = "LineColorToolStripMenuItem1"
-        Me.LineColorToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.LineColorToolStripMenuItem1.Size = New System.Drawing.Size(171, 22)
         Me.LineColorToolStripMenuItem1.Text = "Line Color"
         '
         'FontColorToolStripMenuItem
         '
         Me.FontColorToolStripMenuItem.Name = "FontColorToolStripMenuItem"
-        Me.FontColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FontColorToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.FontColorToolStripMenuItem.Text = "Font Color"
         '
         'PointColorToolStripMenuItem
         '
         Me.PointColorToolStripMenuItem.Name = "PointColorToolStripMenuItem"
-        Me.PointColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PointColorToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.PointColorToolStripMenuItem.Text = "Point Color"
         '
         'ScaleColorToolStripMenuItem
         '
         Me.ScaleColorToolStripMenuItem.Name = "ScaleColorToolStripMenuItem"
-        Me.ScaleColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ScaleColorToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.ScaleColorToolStripMenuItem.Text = "Scale Color"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(168, 6)
         '
         'LineColorToolStripMenuItem
         '
         Me.LineColorToolStripMenuItem.Name = "LineColorToolStripMenuItem"
-        Me.LineColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LineColorToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.LineColorToolStripMenuItem.Text = "Segment Color 1"
         '
         'ShortArmColorToolStripMenuItem
         '
         Me.ShortArmColorToolStripMenuItem.Name = "ShortArmColorToolStripMenuItem"
-        Me.ShortArmColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ShortArmColorToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.ShortArmColorToolStripMenuItem.Text = "Segment Color 2"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(168, 6)
         '
         'NodeSizeToolStripMenuItem
         '
         Me.NodeSizeToolStripMenuItem.Name = "NodeSizeToolStripMenuItem"
-        Me.NodeSizeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NodeSizeToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.NodeSizeToolStripMenuItem.Text = "Node Size"
         '
         'MouseToolStripMenuItem
         '
         Me.MouseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DisableDoubleClickToolStripMenuItem, Me.DisableLeftButtonDragToolStripMenuItem})
         Me.MouseToolStripMenuItem.Name = "MouseToolStripMenuItem"
-        Me.MouseToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MouseToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.MouseToolStripMenuItem.Text = "Mouse(&M)"
         '
         'DisableDoubleClickToolStripMenuItem
@@ -683,37 +687,37 @@ Partial Class Form_meansure
         '
         Me.ColorChannelToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RedToolStripMenuItem, Me.GreenToolStripMenuItem, Me.BlueToolStripMenuItem, Me.GrayToolStripMenuItem, Me.CODEToolStripMenuItem, Me.RGBToolStripMenuItem})
         Me.ColorChannelToolStripMenuItem.Name = "ColorChannelToolStripMenuItem"
-        Me.ColorChannelToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ColorChannelToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ColorChannelToolStripMenuItem.Text = "Color Channel"
         '
         'RedToolStripMenuItem
         '
         Me.RedToolStripMenuItem.Name = "RedToolStripMenuItem"
-        Me.RedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RedToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
         Me.RedToolStripMenuItem.Text = "Red"
         '
         'GreenToolStripMenuItem
         '
         Me.GreenToolStripMenuItem.Name = "GreenToolStripMenuItem"
-        Me.GreenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GreenToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
         Me.GreenToolStripMenuItem.Text = "Green"
         '
         'BlueToolStripMenuItem
         '
         Me.BlueToolStripMenuItem.Name = "BlueToolStripMenuItem"
-        Me.BlueToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BlueToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
         Me.BlueToolStripMenuItem.Text = "Blue"
         '
         'GrayToolStripMenuItem
         '
         Me.GrayToolStripMenuItem.Name = "GrayToolStripMenuItem"
-        Me.GrayToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GrayToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
         Me.GrayToolStripMenuItem.Text = "Gray"
         '
         'CODEToolStripMenuItem
         '
         Me.CODEToolStripMenuItem.Name = "CODEToolStripMenuItem"
-        Me.CODEToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CODEToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
         Me.CODEToolStripMenuItem.Text = "CODE"
         '
         'RGBToolStripMenuItem
@@ -721,7 +725,7 @@ Partial Class Form_meansure
         Me.RGBToolStripMenuItem.Checked = True
         Me.RGBToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.RGBToolStripMenuItem.Name = "RGBToolStripMenuItem"
-        Me.RGBToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RGBToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
         Me.RGBToolStripMenuItem.Text = "RGB"
         '
         'HelpHToolStripMenuItem
@@ -845,6 +849,7 @@ Partial Class Form_meansure
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5})
+        Me.ListView1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
@@ -1164,6 +1169,18 @@ Partial Class Form_meansure
         Me.ColumnHeader10.Text = "node_list"
         Me.ColumnHeader10.Width = 0
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InsertToToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(138, 26)
+        '
+        'InsertToToolStripMenuItem
+        '
+        Me.InsertToToolStripMenuItem.Name = "InsertToToolStripMenuItem"
+        Me.InsertToToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
+        Me.InsertToToolStripMenuItem.Text = "Insert To..."
+        '
         'Form_meansure
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -1197,6 +1214,7 @@ Partial Class Form_meansure
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         CType(Me.Picture_color, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1325,4 +1343,6 @@ Partial Class Form_meansure
     Friend WithEvents GrayToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CODEToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RGBToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents InsertToToolStripMenuItem As ToolStripMenuItem
 End Class

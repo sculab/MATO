@@ -3201,4 +3201,50 @@ points_group(j - 1).points_group_2, points_group(j - 1).points_type_2, points_gr
         CODEToolStripMenuItem.Checked = False
         RGBToolStripMenuItem.Checked = True
     End Sub
+
+    Private Sub InsertToToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InsertToToolStripMenuItem.Click
+        If ListView1.SelectedIndices.Count > 0 Then
+            Dim target_str As String = InputBox("Please enter a new ID (starting from 1): ", "New ID", "")
+            If target_str <> "" Then
+                Dim target_id As Integer = CInt(target_str)
+                If target_id >= 1 And target_id <= ListView1.Items.Count Then
+                    Dim current_id As Integer = ListView1.SelectedIndices(0) + 1
+                    Dim temp_longarm() As Single = longarm.Clone
+                    Dim temp_shortarm() As Single = shortarm.Clone
+                    Dim temp_suiarm() As Single = suiarm.Clone
+                    Dim temp_points_group() As Object = points_group.Clone
+
+                    Dim temp_list As New List(Of Integer)
+                    For i As Integer = 0 To data_count
+                        temp_list.Add(i)
+                    Next
+                    temp_list.Remove(current_id)
+                    temp_list.Insert(target_id, current_id)
+
+                    Dim temp_ListView1 As Object = ListView1.Items(current_id - 1)
+                    ListView1.Items.RemoveAt(current_id - 1)
+                    ListView1.Items.Insert(target_id - 1, temp_ListView1)
+
+                    For i As Integer = 1 To data_count
+                        If temp_list(i) <> i Then
+                            longarm(i) = temp_longarm(temp_list(i))
+                            shortarm(i) = temp_shortarm(temp_list(i))
+                            suiarm(i) = temp_suiarm(temp_list(i))
+                            points_group(i) = temp_points_group(temp_list(i))
+                        End If
+                        ListView1.Items(i - 1).SubItems(0).Text = i
+                        ListView1.Items(i - 1).SubItems(3).Text = suiarm(i)
+                    Next
+                    Picture.Refresh()
+                    Me.Refresh()
+                Else
+                    MsgBox("Please enter a valid ID!")
+                End If
+            Else
+                MsgBox("Please enter a valid ID!")
+            End If
+        Else
+            MsgBox("Please select the item you want to modify!")
+        End If
+    End Sub
 End Class
