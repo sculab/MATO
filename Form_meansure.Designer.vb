@@ -120,6 +120,8 @@ Partial Class Form_meansure
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.InsertToToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
@@ -148,8 +150,8 @@ Partial Class Form_meansure
         Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.InsertToToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AscendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DescendingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -160,9 +162,9 @@ Partial Class Form_meansure
         CType(Me.PictureZoom, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.Picture_color, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ColorDialog1
@@ -887,6 +889,18 @@ Partial Class Form_meansure
         Me.ColumnHeader5.Text = "B"
         Me.ColumnHeader5.Width = 30
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InsertToToolStripMenuItem, Me.AscendingToolStripMenuItem, Me.DescendingToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 92)
+        '
+        'InsertToToolStripMenuItem
+        '
+        Me.InsertToToolStripMenuItem.Name = "InsertToToolStripMenuItem"
+        Me.InsertToToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InsertToToolStripMenuItem.Text = "Insert To..."
+        '
         'RadioButton4
         '
         Me.RadioButton4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
@@ -1169,17 +1183,17 @@ Partial Class Form_meansure
         Me.ColumnHeader10.Text = "node_list"
         Me.ColumnHeader10.Width = 0
         '
-        'ContextMenuStrip1
+        'AscendingToolStripMenuItem
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InsertToToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(138, 26)
+        Me.AscendingToolStripMenuItem.Name = "AscendingToolStripMenuItem"
+        Me.AscendingToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AscendingToolStripMenuItem.Text = "Ascending"
         '
-        'InsertToToolStripMenuItem
+        'DescendingToolStripMenuItem
         '
-        Me.InsertToToolStripMenuItem.Name = "InsertToToolStripMenuItem"
-        Me.InsertToToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
-        Me.InsertToToolStripMenuItem.Text = "Insert To..."
+        Me.DescendingToolStripMenuItem.Name = "DescendingToolStripMenuItem"
+        Me.DescendingToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DescendingToolStripMenuItem.Text = "Descending"
         '
         'Form_meansure
         '
@@ -1211,10 +1225,10 @@ Partial Class Form_meansure
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         CType(Me.Picture_color, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1345,4 +1359,6 @@ Partial Class Form_meansure
     Friend WithEvents RGBToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents InsertToToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AscendingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DescendingToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -36,6 +36,8 @@ Module Module_meansure
     Public armlongth As Single
     Public operate As String = "null"
     Public image_path As String
+    Public pic_W As Integer = -1
+    Public pic_H As Integer = -1
     Public node_count As Integer
     Public in_meansure As Boolean
     Public sumarm As Single = 1000
@@ -325,6 +327,8 @@ erh:
     Public Sub clear_result()
         data_count = 1
         last_type = 0
+        pic_H = -1
+        pic_W = -1
         'scale_size = 100
         'scale_unit = "unit"
         For i As Integer = 0 To 2048

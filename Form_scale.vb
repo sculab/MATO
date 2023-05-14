@@ -11,9 +11,6 @@ Public Class Form_scale
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         If ListView1.SelectedIndices.Count > 0 Then
@@ -80,7 +77,8 @@ Public Class Form_scale
         ListView1.Items.RemoveAt(ListView1.SelectedIndices(0))
     End Sub
 
-    Private Sub Form_scale_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
     End Sub
 End Class

@@ -63,9 +63,15 @@ Public Class Form_meansure
             image_path = image_path
             Picture.Image = Drawing.Image.FromStream(mystream)
             Picture.Size = Picture.Image.Size
+            pic_W = Picture.Size.Width
+            pic_H = Picture.Size.Height
             zoom_radio = 1
             mystream.Close()
         Else
+            If pic_W > 0 Then
+                Picture.Width = pic_W
+                Picture.Height = pic_H
+            End If
             MsgBox("The postion of linked photo has been changed, please load the photo manually.")
         End If
     End Sub
@@ -91,6 +97,13 @@ Public Class Form_meansure
                             line = sr.ReadLine()
                             line = line.ToUpper()
                         End If
+                        If line.StartsWith("PICSIZE=") Then
+                            Dim pic_size() As String = line.Replace("PICSIZE=", "").Replace(";", "").Split("|")
+                            pic_W = CInt(pic_size(0))
+                            pic_H = CInt(pic_size(1))
+                            line = sr.ReadLine()
+                            line = line.ToUpper()
+                        End If
                         If line.StartsWith("PICPATH=") Then
                             image_path = line.Replace("PICPATH=", "").Replace(";", "")
                             find_image(filename)
@@ -105,8 +118,12 @@ Public Class Form_meansure
                         End If
                         If line.StartsWith("STAFF=") Then
                             current_scale = CSng(line.Replace("STAFF=", "").Replace(";", ""))
-                            scale_size = 10
-
+                            ' MsgBox("该测定的标尺为："+Staff.ToString)
+                            line = sr.ReadLine()
+                            line = line.ToUpper()
+                        End If
+                        If line.StartsWith("SCALE_SIZE=") Then
+                            scale_size = CSng(line.Replace("SCALE_SIZE=", "").Replace(";", ""))
                             ' MsgBox("该测定的标尺为："+Staff.ToString)
                             line = sr.ReadLine()
                             line = line.ToUpper()
@@ -221,9 +238,11 @@ Public Class Form_meansure
         sw.WriteLine("Begin;")
         sw.WriteLine("NUM=" + Str(data_count))
         sw.WriteLine("LEVEL=" + Str(times))
+        sw.WriteLine("PICSIZE=" + Str(pic_W) + "|" + Str(pic_H))
         sw.WriteLine("PICPATH=" + image_path)
         sw.WriteLine("SCALE=" + current_scale.ToString)
-        sw.WriteLine("UNIT=" + ScaleForm.ComboBox1.SelectedItem)
+        sw.WriteLine("SCALE_SIZE=" + scale_size.ToString)
+        sw.WriteLine("UNIT=" + scale_unit)
         sw.WriteLine("Data;")
         For line = 1 To data_count
             sw.WriteLine(Str(data_id(line)) + ";" + Str(longarm(line)) + ";" + Str(shortarm(line)) + ";" + Str(suiarm(line)) + ";" + Str(Range(line)))
@@ -3246,5 +3265,79 @@ points_group(j - 1).points_group_2, points_group(j - 1).points_type_2, points_gr
         Else
             MsgBox("Please select the item you want to modify!")
         End If
+    End Sub
+
+    Private Sub AscendingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AscendingToolStripMenuItem.Click
+        Dim temp_longarm() As Single = longarm.Clone
+        Dim temp_shortarm() As Single = shortarm.Clone
+        Dim temp_suiarm() As Single = suiarm.Clone
+        Dim temp_points_group() As Object = points_group.Clone
+
+        Dim temp_list() As Integer
+        ReDim Preserve temp_list(data_count)
+        Dim temp_armsum() As Single
+        ReDim Preserve temp_armsum(data_count)
+        Dim temp_listview() As Object
+        ReDim Preserve temp_listview(data_count - 1)
+
+        For i As Integer = 1 To data_count
+            temp_list(i) = i
+            temp_armsum(i) = temp_shortarm(i) + temp_longarm(i)
+            temp_listview(i - 1) = ListView1.Items(i - 1).Clone
+        Next
+        Array.Sort(temp_armsum, temp_list, 1, data_count)
+        For i As Integer = 1 To data_count
+            If temp_list(i) <> i Then
+                longarm(i) = temp_longarm(temp_list(i))
+                shortarm(i) = temp_shortarm(temp_list(i))
+                suiarm(i) = temp_suiarm(temp_list(i))
+                points_group(i) = temp_points_group(temp_list(i))
+                ListView1.Items(i - 1) = temp_listview(temp_list(i) - 1)
+            End If
+
+        Next
+        For i As Integer = 1 To data_count
+            ListView1.Items(i - 1).SubItems(0).Text = i
+            ListView1.Items(i - 1).SubItems(3).Text = suiarm(i)
+        Next
+        Picture.Refresh()
+        Me.Refresh()
+    End Sub
+
+    Private Sub DescendingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DescendingToolStripMenuItem.Click
+        Dim temp_longarm() As Single = longarm.Clone
+        Dim temp_shortarm() As Single = shortarm.Clone
+        Dim temp_suiarm() As Single = suiarm.Clone
+        Dim temp_points_group() As Object = points_group.Clone
+
+        Dim temp_list() As Integer
+        ReDim Preserve temp_list(data_count)
+        Dim temp_armsum() As Single
+        ReDim Preserve temp_armsum(data_count)
+        Dim temp_listview() As Object
+        ReDim Preserve temp_listview(data_count - 1)
+
+        For i As Integer = 1 To data_count
+            temp_list(i) = i
+            temp_armsum(i) = temp_shortarm(i) + temp_longarm(i)
+            temp_listview(i - 1) = ListView1.Items(i - 1).Clone
+        Next
+        Array.Sort(temp_armsum, temp_list, 1, data_count, Descending)
+        For i As Integer = 1 To data_count
+            If temp_list(i) <> i Then
+                longarm(i) = temp_longarm(temp_list(i))
+                shortarm(i) = temp_shortarm(temp_list(i))
+                suiarm(i) = temp_suiarm(temp_list(i))
+                points_group(i) = temp_points_group(temp_list(i))
+                ListView1.Items(i - 1) = temp_listview(temp_list(i) - 1)
+            End If
+
+        Next
+        For i As Integer = 1 To data_count
+            ListView1.Items(i - 1).SubItems(0).Text = i
+            ListView1.Items(i - 1).SubItems(3).Text = suiarm(i)
+        Next
+        Picture.Refresh()
+        Me.Refresh()
     End Sub
 End Class
