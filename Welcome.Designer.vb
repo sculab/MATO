@@ -61,17 +61,18 @@ Partial Class Welcome
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(77, 16)
         Me.RadioButton2.TabIndex = 2
-        Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Karyotype"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
         Me.RadioButton1.Location = New System.Drawing.Point(6, 20)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(71, 16)
         Me.RadioButton1.TabIndex = 1
+        Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Standard"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '

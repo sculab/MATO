@@ -900,6 +900,7 @@ Public Class Form_meansure
 
     End Sub
     Private Sub Form1_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+        e.Cancel = True
         Select Case mode_type
             Case 0
                 If data_count > 0 Then
@@ -915,9 +916,12 @@ Public Class Form_meansure
                         If resultdialog = DialogResult.OK Then
                             save_csv(sfd.FileName, ListView2)
                         End If
-                    ElseIf CloseDialog = DialogResult.Cancel Then
-                        e.Cancel = True
+                        End
+                    ElseIf CloseDialog = DialogResult.No Then
+                        End
                     End If
+                Else
+                    End
                 End If
             Case 1
                 Dim temp_data_count As Integer = data_count
@@ -940,15 +944,15 @@ Public Class Form_meansure
                         If resultdialog = DialogResult.OK Then
                             write_karyo(sfd.FileName)
                         End If
-                    ElseIf CloseDialog = DialogResult.Cancel Then
-                        e.Cancel = True
+                        End
+                    ElseIf CloseDialog = DialogResult.No Then
+                        End
                     End If
+                Else
+                    End
                 End If
                 data_count = temp_data_count
         End Select
-        If e.Cancel = False Then
-            End
-        End If
     End Sub
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Threading.Thread.CurrentThread.CurrentCulture = ci
