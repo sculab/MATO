@@ -1,6 +1,18 @@
 # MATO: Measurement and Analysis TOol
-The advances of the bioinformatics and genomics over recent years, and the growing importance of determining the relationships between structure and function, have made cytotaxonomy and morphology an increasingly important discipline. Quantitative determination of various traits is the basis for morphological studies. Due to diversity of traits in different taxa, many measurements must be performed manually. However, existing measurement tools for morphology and cytotaxonomy lack repeatability and not able to perform professional calculations and statistics. Here, we developed MATO (Measurement and Analysis tools), an update of previous software KaryoType, with the goal of accelerating repetitive morphometric tasks while also obtaining quantitative and reproducible results. MATO enhanced chromosome measurements and karyotype analysis from previous version by introducing size-based Karyotyping. . Additionally, MATO covers almost all the morphometric functions, including length, size, angle, count and color, for plant taxonomy. 
-![fig1](./icons/fig1.png)
+Advancements in bioinformatics and genomics have heightened the significance of cytotaxonomy and morphology as fields of study. The quantification of various characters forms the basis of morphological investigations. However, due to variations among characters across different taxa, manual measurements are commonly employed. Yet, existing measurement tools for morphology and cytotaxonomy lack repeatability and statistical analysis compatibility. To address these limitations, we have developed MATO (Measurement and Analysis tools) as an updated version of the KaryoType software. MATO aims to accelerate repetitive morphometric tasks and yield quantitative and reproducible outcomes. By introducing size-based Karyotyping and a novel grouping algorithm, MATO enhances chromosome measurements and karyotype analysis. Additionally, MATO encompasses a broad range of morphometric characters, including length, size, angle, count, and color, frequently utilized in plant taxonomy. MATO empowers researchers in the fields of cytotaxonomy and morphology by providing enhanced measurement capabilities, statistical analysis compatibility, and improved user-friendliness, facilitating advancements in their research endeavors.
+![fig1](./icons/fig0.png)
+
+- Current tools for morphology and cytotaxonomy measurements face challenges in providing consistent results and compatibility with statistical analysis.
+
+- MATO (Measurement and Analysis Tools), an upgraded version of our previous KaryoType software, is introduced to address these shortcomings.
+- MATO improves chromosome measurements and karyotype analysis through the incorporation of size-based Karyotyping and a novel grouping algorithm.
+
+- This tool accommodates a wide variety of morphometric characters such as length, size, angle, count, and color, which are often employed in morphological studies.
+
+
+# Cite
+Liu, L., Wang, Q., Zhang, Z., He, X. & Yu, Y. MATO: An updated tool for capturing and analyzing cytotaxonomic and morphological data. The Innovation Life. 2023. 1(1): 1-7. doi:10.59717/j.xinn-life.2023.100010
+
 
 # Manual
 [English](./manual_en.pdf) [中文](./manual_zh_cn.pdf)
