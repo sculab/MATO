@@ -15,7 +15,8 @@ Liu, L., Wang, Q., Zhang, Z., He, X. & Yu, Y. MATO: An updated tool for capturin
 
 
 # Manual
-[English](./manual_en.pdf) [中文](./manual_zh_cn.pdf)
+- [English](./manual_en.pdf) 
+- [中文](./manual_zh_cn.pdf)
 
 # Install
 Download the last release of MATO from [here](https://github.com/sculab/MATO/releases)

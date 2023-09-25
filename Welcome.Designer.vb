@@ -34,6 +34,7 @@ Partial Class Welcome
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -154,11 +155,24 @@ Partial Class Welcome
         Me.PictureBox6.TabIndex = 8
         Me.PictureBox6.TabStop = False
         '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.TextBox1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(6, 155)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(417, 60)
+        Me.TextBox1.TabIndex = 10
+        Me.TextBox1.Text = resources.GetString("TextBox1.Text")
+        '
         'Welcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(435, 139)
+        Me.ClientSize = New System.Drawing.Size(435, 221)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox3)
@@ -199,4 +213,5 @@ Partial Class Welcome
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents TextBox1 As TextBox
 End Class
