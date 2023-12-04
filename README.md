@@ -19,7 +19,7 @@ Liu, L., Wang, Q., Zhang, Z., He, X. & Yu, Y. MATO: An updated tool for capturin
 - [中文](./manual_zh_cn.pdf)
 
 # Install
-Download the last release of MATO from [here](https://github.com/sculab/MATO/releases)
+Download the last release of MATO from [here](https://github.com/yyscu/MATO/releases)
 
 MATO is distributed as a zip package. You just need to **unzip the zip package** to any location on your computer and double-click on the folder to run the program.
 
