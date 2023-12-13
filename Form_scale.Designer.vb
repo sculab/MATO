@@ -25,9 +25,12 @@ Partial Class Form_scale
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_scale))
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ContextMenu1 = New System.Windows.Forms.ContextMenu()
-        Me.MenuItem1 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
+        ' TODO ContextMenu is no longer supported. Use ContextMenuStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+        Me.ContextMenu1 = New System.Windows.Forms.ContextMenuStrip
+        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+        Me.MenuItem1 = New System.Windows.Forms.ToolStripMenuItem
+        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+        Me.MenuItem2 = New System.Windows.Forms.ToolStripMenuItem
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
@@ -76,16 +79,19 @@ Partial Class Form_scale
         '
         'ContextMenu1
         '
-        Me.ContextMenu1.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem1, Me.MenuItem2})
+        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+        Me.ContextMenu1.Items.AddRange(New ToolStripItem() {Me.MenuItem1, Me.MenuItem2})
+        ' 
+        'ContextMenuStrip1.Items.AddRange(New ToolStripItem() {全选ToolStripMenuItem, 反选ToolStripMenuItem1, 全不选ToolStripMenuItem, ToolStripSeparator6, 清空数据ToolStripMenuItem})
         '
         'MenuItem1
         '
-        Me.MenuItem1.Index = 0
+        'Me.MenuItem1.Index = 0
         Me.MenuItem1.Text = "Delete"
         '
         'MenuItem2
         '
-        Me.MenuItem2.Index = 1
+        'Me.MenuItem2.Index = 1
         Me.MenuItem2.Text = "Rename"
         '
         'ComboBox1
@@ -112,7 +118,7 @@ Partial Class Form_scale
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
-        Me.ListView1.ContextMenu = Me.ContextMenu1
+        Me.ListView1.ContextMenuStrip = Me.ContextMenu1
         Me.ListView1.FullRowSelect = True
         Me.ListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.ListView1.HideSelection = False
@@ -334,9 +340,12 @@ Partial Class Form_scale
     End Sub
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ContextMenu1 As ContextMenu
-    Friend WithEvents MenuItem1 As MenuItem
-    Friend WithEvents MenuItem2 As MenuItem
+    ' TODO ContextMenu is no longer supported. Use ContextMenuStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+    Friend WithEvents ContextMenu1 As ContextMenuStrip
+    ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+    Friend WithEvents MenuItem1 As ToolStripMenuItem
+    ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+    Friend WithEvents MenuItem2 As ToolStripMenuItem
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Button2 As Button
     Friend WithEvents ListView1 As ListView

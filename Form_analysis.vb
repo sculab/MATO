@@ -238,10 +238,6 @@ Public Class Form_analysis
         End If
     End Sub
 
-    Private Sub ContextMenu2_Popup(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ContextMenu2.Popup
-
-    End Sub
-
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
 
     End Sub

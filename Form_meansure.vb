@@ -2818,7 +2818,9 @@ points_group(j - 1).points_group_2, points_group(j - 1).points_type_2, points_gr
             AffinePoints1(i).Y = AffinePoints1(i).Y - min_h
         Next
         dst_perspective = CvInvoke.GetPerspectiveTransform(AffinePoints0, AffinePoints1)
-        Dim imagesrc As Image(Of Bgr, Byte) = New Image(Of Bgr, Byte)(img)
+        Dim imagesrc As Image(Of Bgr, Byte) = New Image(Of Bgr, Byte)(image_path)
+
+
         Dim imagedec As Image(Of Bgr, Byte) = New Image(Of Bgr, Byte)(Int(max_w - min_w), Int(max_h - min_h))
 
         For i As Integer = 0 To imagesrc.Rows - 1

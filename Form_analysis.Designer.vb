@@ -31,12 +31,18 @@ Partial Class Form_analysis
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.MenuItem3 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem4 = New System.Windows.Forms.MenuItem()
-        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
-        Me.ContextMenu2 = New System.Windows.Forms.ContextMenu()
-        Me.MenuItem1 = New System.Windows.Forms.MenuItem()
-        Me.ContextMenu1 = New System.Windows.Forms.ContextMenu()
+        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+        Me.MenuItem3 = New System.Windows.Forms.ToolStripMenuItem
+        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+        Me.MenuItem4 = New System.Windows.Forms.ToolStripMenuItem
+        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+        Me.MenuItem2 = New System.Windows.Forms.ToolStripMenuItem
+        ' TODO ContextMenu is no longer supported. Use ContextMenuStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+        Me.ContextMenu2 = New System.Windows.Forms.ContextMenuStrip
+        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+        Me.MenuItem1 = New System.Windows.Forms.ToolStripMenuItem
+        ' TODO ContextMenu is no longer supported. Use ContextMenuStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+        Me.ContextMenu1 = New System.Windows.Forms.ContextMenuStrip
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -125,38 +131,40 @@ Partial Class Form_analysis
         '
         'MenuItem3
         '
-        Me.MenuItem3.Index = 2
+        'Me.MenuItem3.Index = 2
         Me.MenuItem3.Text = "Refreash(&F)"
         '
         'MenuItem4
         '
-        Me.MenuItem4.Index = 1
+        'Me.MenuItem4.Index = 1
         Me.MenuItem4.Text = "Save Graphic"
         '
         'MenuItem2
         '
-        Me.MenuItem2.Index = 0
+        'Me.MenuItem2.Index = 0
         Me.MenuItem2.Text = "Idiogram"
         '
         'ContextMenu2
         '
-        Me.ContextMenu2.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem2, Me.MenuItem4, Me.MenuItem3})
+        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+        Me.ContextMenu2.Items.AddRange(New ToolStripItem() {Me.MenuItem2, Me.MenuItem4, Me.MenuItem3})
         '
         'MenuItem1
         '
-        Me.MenuItem1.Index = 0
+        'Me.MenuItem1.Index = 0
         Me.MenuItem1.Text = "Save results"
         '
         'ContextMenu1
         '
-        Me.ContextMenu1.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem1})
+        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+        Me.ContextMenu1.Items.AddRange(New ToolStripItem() {Me.MenuItem1})
         '
         'RichTextBox1
         '
         Me.RichTextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox1.ContextMenu = Me.ContextMenu1
+        Me.RichTextBox1.ContextMenuStrip = Me.ContextMenu1
         Me.RichTextBox1.Location = New System.Drawing.Point(205, 3)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(536, 207)
@@ -350,12 +358,18 @@ Partial Class Form_analysis
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents MenuItem3 As MenuItem
-    Friend WithEvents MenuItem4 As MenuItem
-    Friend WithEvents MenuItem2 As MenuItem
-    Friend WithEvents ContextMenu2 As ContextMenu
-    Friend WithEvents MenuItem1 As MenuItem
-    Friend WithEvents ContextMenu1 As ContextMenu
+    ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+    Friend WithEvents MenuItem3 As ToolStripMenuItem
+    ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+    Friend WithEvents MenuItem4 As ToolStripMenuItem
+    ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+    Friend WithEvents MenuItem2 As ToolStripMenuItem
+    ' TODO ContextMenu is no longer supported. Use ContextMenuStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+    Friend WithEvents ContextMenu2 As ContextMenuStrip
+    ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+    Friend WithEvents MenuItem1 As ToolStripMenuItem
+    ' TODO ContextMenu is no longer supported. Use ContextMenuStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+    Friend WithEvents ContextMenu1 As ContextMenuStrip
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
