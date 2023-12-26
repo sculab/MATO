@@ -1717,14 +1717,14 @@ Public Class Form_meansure
 
     End Sub
 
-    Private Sub Form_main_ResizeEnd(sender As Object, e As EventArgs) Handles Me.ResizeEnd
+    Private Sub Form_main_ResizeEnd(sender As Object, e As EventArgs) Handles MyBase.ResizeEnd
         If SplitContainer1.Width > 574 Then
             SplitContainer1.SplitterDistance = SplitContainer1.Width - 231
 
         End If
     End Sub
 
-    Private Sub Form_main_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+    Private Sub Form_main_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
 
     End Sub
 
@@ -1977,8 +1977,8 @@ Public Class Form_meansure
         Aboutform.Show()
     End Sub
 
-    Private Sub Form_main_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        Picture.Refresh()
+    Private Sub Form_main_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+        Picture.Refresh
     End Sub
 
     Private Sub Picture_MouseClick(sender As Object, e As MouseEventArgs) Handles Picture.MouseClick
@@ -2323,7 +2323,6 @@ Public Class Form_meansure
                 CombineResultsToolStripMenuItem.Visible = False
                 ToolStripSeparator1.Visible = False
                 SaveFileToolStripMenuItem.Visible = False
-                'LineColorToolStripMenuItem.Text = "Segment Color 1"
 
                 clear_result()
                 clear_view()

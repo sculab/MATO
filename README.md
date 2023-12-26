@@ -23,6 +23,6 @@ Download the last release of MATO from [GitHub](https://github.com/yyscu/MATO/re
 
 MATO is distributed as a zip package. You just need to **unzip the zip package** to any location on your computer and double-click on the folder to run the program.
 
-**Windows**: Please make sure Microsoft® .NET 3.5 Framework or above have be installed on your computer. The .NET framework is part of Windows, but versions may vary from system to system. The .NET framework package is available for free on Microsoft's official website. Please install it before you use MATO to prevent it from not working. 
-
+**Windows**: The .NET 6.0 Desktop Runtime x64 must be installed on the computer for proper software functionality.
+[.NET 6.0 Desktop Runtime](https://dotnet.microsoft.com/zh-cn/download/dotnet/thank-you/runtime-desktop-6.0.21-windows-x64-installer)
 **MacOS**: MATO is packaged with Wineskin to run on macOS. Please try to use the latest version of MacOS. Due to limited conditions, MATO has not been tested on all macOS versions.
