@@ -27,7 +27,7 @@
         My.Computer.FileSystem.CreateDirectory(root_path + "temp")
     End Sub
 
-    Private Sub Welcome_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+    Private Sub Welcome_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
 
     End Sub
 
