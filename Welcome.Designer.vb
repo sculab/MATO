@@ -22,7 +22,7 @@ Partial Class Welcome
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Welcome))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Welcome))
         GroupBox1 = New GroupBox()
         RadioButton2 = New RadioButton()
         RadioButton1 = New RadioButton()
@@ -35,6 +35,7 @@ Partial Class Welcome
         PictureBox5 = New PictureBox()
         PictureBox6 = New PictureBox()
         TextBox1 = New TextBox()
+        ComboBox1 = New ComboBox()
         GroupBox1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -83,10 +84,10 @@ Partial Class Welcome
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(328, 114)
+        Button2.Location = New Point(345, 114)
         Button2.Margin = New Padding(4)
         Button2.Name = "Button2"
-        Button2.Size = New Size(88, 29)
+        Button2.Size = New Size(71, 29)
         Button2.TabIndex = 2
         Button2.Text = "GO"
         Button2.UseVisualStyleBackColor = True
@@ -180,11 +181,22 @@ Partial Class Welcome
         TextBox1.TabIndex = 10
         TextBox1.Text = resources.GetString("TextBox1.Text")
         ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Items.AddRange(New Object() {"中文", "English"})
+        ComboBox1.Location = New Point(259, 116)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(79, 25)
+        ComboBox1.TabIndex = 11
+        ' 
         ' Welcome
         ' 
         AutoScaleDimensions = New SizeF(7F, 17F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(424, 239)
+        Controls.Add(ComboBox1)
         Controls.Add(TextBox1)
         Controls.Add(PictureBox5)
         Controls.Add(PictureBox6)
@@ -227,4 +239,5 @@ Partial Class Welcome
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

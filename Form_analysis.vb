@@ -214,13 +214,13 @@ Public Class Form_analysis
 
     End Sub
 
-    Private Sub Form5_VisibleChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.VisibleChanged
-        If Me.Visible = True And data_count > 1 And PictureBox1.Height > 40 Then
+    Private Sub Form5_VisibleChanged(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.VisibleChanged
+        If Visible = True And data_count > 1 And PictureBox1.Height > 40 Then
             'my_zoom_radio = get_zoom_radio(110)
             PictureBox1.Width = (data_count + 1) * NumericUpDown1.Value + (data_count / times + 1) * NumericUpDown2.Value + 30
             my_zoom_radio = get_zoom_radio(110)
-            PictureBox1.Refresh()
-            info()
+            PictureBox1.Refresh
+            info
         End If
     End Sub
 
@@ -264,12 +264,12 @@ Public Class Form_analysis
         Me.Refresh()
     End Sub
 
-    Private Sub Form_analysis_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-        If Me.Height > 220 Then
+    Private Sub Form_analysis_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        If Height > 220 Then
             SplitContainer1.SplitterDistance = SplitContainer1.Height - 214
             PictureBox1.Width = (data_count + 1) * NumericUpDown1.Value + (data_count / times + 1) * NumericUpDown2.Value + 30
             my_zoom_radio = get_zoom_radio(110)
-            PictureBox1.Refresh()
+            PictureBox1.Refresh
         End If
     End Sub
     Public Function get_zoom_radio(ByVal image_height As Single) As Single

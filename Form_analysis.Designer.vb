@@ -22,331 +22,350 @@ Partial Class Form_analysis
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_analysis))
-        Me.IdiogramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveResultToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveGraphicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-        Me.MenuItem3 = New System.Windows.Forms.ToolStripMenuItem
-        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-        Me.MenuItem4 = New System.Windows.Forms.ToolStripMenuItem
-        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-        Me.MenuItem2 = New System.Windows.Forms.ToolStripMenuItem
-        ' TODO ContextMenu is no longer supported. Use ContextMenuStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-        Me.ContextMenu2 = New System.Windows.Forms.ContextMenuStrip
-        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-        Me.MenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        ' TODO ContextMenu is no longer supported. Use ContextMenuStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-        Me.ContextMenu1 = New System.Windows.Forms.ContextMenuStrip
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.MenuStrip1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
-        Me.SplitContainer1.Panel1.SuspendLayout()
-        Me.SplitContainer1.Panel2.SuspendLayout()
-        Me.SplitContainer1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'IdiogramToolStripMenuItem
-        '
-        Me.IdiogramToolStripMenuItem.Name = "IdiogramToolStripMenuItem"
-        Me.IdiogramToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
-        Me.IdiogramToolStripMenuItem.Text = "Idiogram"
-        '
-        'SaveResultToolStripMenuItem
-        '
-        Me.SaveResultToolStripMenuItem.Name = "SaveResultToolStripMenuItem"
-        Me.SaveResultToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
-        Me.SaveResultToolStripMenuItem.Text = "Save Result"
-        '
-        'SaveGraphicToolStripMenuItem
-        '
-        Me.SaveGraphicToolStripMenuItem.Name = "SaveGraphicToolStripMenuItem"
-        Me.SaveGraphicToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
-        Me.SaveGraphicToolStripMenuItem.Text = "Save Graphic"
-        '
-        'SaveToolStripMenuItem
-        '
-        Me.SaveToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveGraphicToolStripMenuItem, Me.SaveResultToolStripMenuItem})
-        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
-        Me.SaveToolStripMenuItem.Text = "Save"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
-        Me.FileToolStripMenuItem.Text = "File"
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(744, 24)
-        Me.MenuStrip1.TabIndex = 12
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'ViewToolStripMenuItem
-        '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IdiogramToolStripMenuItem})
-        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
-        Me.ViewToolStripMenuItem.Text = "View"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(716, 300)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'MenuItem3
-        '
-        'Me.MenuItem3.Index = 2
-        Me.MenuItem3.Text = "Refreash(&F)"
-        '
-        'MenuItem4
-        '
-        'Me.MenuItem4.Index = 1
-        Me.MenuItem4.Text = "Save Graphic"
-        '
-        'MenuItem2
-        '
-        'Me.MenuItem2.Index = 0
-        Me.MenuItem2.Text = "Idiogram"
-        '
-        'ContextMenu2
-        '
-        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-        Me.ContextMenu2.Items.AddRange(New ToolStripItem() {Me.MenuItem2, Me.MenuItem4, Me.MenuItem3})
-        '
-        'MenuItem1
-        '
-        'Me.MenuItem1.Index = 0
-        Me.MenuItem1.Text = "Save results"
-        '
-        'ContextMenu1
-        '
-        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-        Me.ContextMenu1.Items.AddRange(New ToolStripItem() {Me.MenuItem1})
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox1.ContextMenuStrip = Me.ContextMenu1
-        Me.RichTextBox1.Location = New System.Drawing.Point(205, 3)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(536, 207)
-        Me.RichTextBox1.TabIndex = 9
-        Me.RichTextBox1.Text = ""
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Font = New System.Drawing.Font("宋体", 11.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(10, 21)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(45, 24)
-        Me.TextBox1.TabIndex = 0
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(61, 21)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(77, 26)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Swap"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox2.Font = New System.Drawing.Font("宋体", 11.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(145, 21)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(45, 24)
-        Me.TextBox2.TabIndex = 0
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.CheckBox1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(196, 86)
-        Me.GroupBox1.TabIndex = 8
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Manual adjustment"
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(10, 53)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(84, 20)
-        Me.CheckBox1.TabIndex = 2
-        Me.CheckBox1.Text = "re-arrange"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'SplitContainer1
-        '
-        Me.SplitContainer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 25)
-        Me.SplitContainer1.Name = "SplitContainer1"
-        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'SplitContainer1.Panel1
-        '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.PictureBox1)
-        '
-        'SplitContainer1.Panel2
-        '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox2)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox1)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.RichTextBox1)
-        Me.SplitContainer1.Size = New System.Drawing.Size(744, 516)
-        Me.SplitContainer1.SplitterDistance = 302
-        Me.SplitContainer1.TabIndex = 13
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Controls.Add(Me.NumericUpDown3)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.Button2)
-        Me.GroupBox2.Controls.Add(Me.NumericUpDown2)
-        Me.GroupBox2.Controls.Add(Me.NumericUpDown1)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 95)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(196, 112)
-        Me.GroupBox2.TabIndex = 10
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Paint"
-        '
-        'NumericUpDown3
-        '
-        Me.NumericUpDown3.Location = New System.Drawing.Point(145, 81)
-        Me.NumericUpDown3.Name = "NumericUpDown3"
-        Me.NumericUpDown3.Size = New System.Drawing.Size(45, 22)
-        Me.NumericUpDown3.TabIndex = 10
-        Me.NumericUpDown3.Value = New Decimal(New Integer() {20, 0, 0, 0})
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(73, 83)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 16)
-        Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Arm width:"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(10, 77)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(63, 26)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = "Refresh"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'NumericUpDown2
-        '
-        Me.NumericUpDown2.Location = New System.Drawing.Point(145, 51)
-        Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(45, 22)
-        Me.NumericUpDown2.TabIndex = 7
-        Me.NumericUpDown2.Value = New Decimal(New Integer() {30, 0, 0, 0})
-        '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(145, 21)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(45, 22)
-        Me.NumericUpDown1.TabIndex = 6
-        Me.NumericUpDown1.Value = New Decimal(New Integer() {45, 0, 0, 0})
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(7, 53)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(136, 16)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Space between group:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(7, 21)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(121, 16)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Space within group:"
-        '
-        'Form_analysis
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(744, 541)
-        Me.Controls.Add(Me.SplitContainer1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Name = "Form_analysis"
-        Me.Text = "Analysis"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.SplitContainer1.Panel1.ResumeLayout(False)
-        Me.SplitContainer1.Panel2.ResumeLayout(False)
-        Me.SplitContainer1.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        IdiogramToolStripMenuItem = New ToolStripMenuItem()
+        SaveResultToolStripMenuItem = New ToolStripMenuItem()
+        SaveGraphicToolStripMenuItem = New ToolStripMenuItem()
+        SaveToolStripMenuItem = New ToolStripMenuItem()
+        FileToolStripMenuItem = New ToolStripMenuItem()
+        MenuStrip1 = New MenuStrip()
+        ViewToolStripMenuItem = New ToolStripMenuItem()
+        PictureBox1 = New PictureBox()
+        MenuItem3 = New ToolStripMenuItem()
+        MenuItem4 = New ToolStripMenuItem()
+        MenuItem2 = New ToolStripMenuItem()
+        ContextMenu2 = New ContextMenuStrip(components)
+        MenuItem1 = New ToolStripMenuItem()
+        ContextMenu1 = New ContextMenuStrip(components)
+        RichTextBox1 = New RichTextBox()
+        TextBox1 = New TextBox()
+        Button1 = New Button()
+        TextBox2 = New TextBox()
+        GroupBox1 = New GroupBox()
+        CheckBox1 = New CheckBox()
+        SplitContainer1 = New SplitContainer()
+        GroupBox2 = New GroupBox()
+        NumericUpDown3 = New NumericUpDown()
+        Label3 = New Label()
+        Button2 = New Button()
+        NumericUpDown2 = New NumericUpDown()
+        NumericUpDown1 = New NumericUpDown()
+        Label2 = New Label()
+        Label1 = New Label()
+        MenuStrip1.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        ContextMenu2.SuspendLayout()
+        ContextMenu1.SuspendLayout()
+        GroupBox1.SuspendLayout()
+        CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
+        SplitContainer1.Panel1.SuspendLayout()
+        SplitContainer1.Panel2.SuspendLayout()
+        SplitContainer1.SuspendLayout()
+        GroupBox2.SuspendLayout()
+        CType(NumericUpDown3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(NumericUpDown2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(NumericUpDown1, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' IdiogramToolStripMenuItem
+        ' 
+        IdiogramToolStripMenuItem.Name = "IdiogramToolStripMenuItem"
+        IdiogramToolStripMenuItem.Size = New Size(180, 24)
+        IdiogramToolStripMenuItem.Text = "Idiogram"
+        ' 
+        ' SaveResultToolStripMenuItem
+        ' 
+        SaveResultToolStripMenuItem.Name = "SaveResultToolStripMenuItem"
+        SaveResultToolStripMenuItem.Size = New Size(159, 24)
+        SaveResultToolStripMenuItem.Text = "Save Result"
+        ' 
+        ' SaveGraphicToolStripMenuItem
+        ' 
+        SaveGraphicToolStripMenuItem.Name = "SaveGraphicToolStripMenuItem"
+        SaveGraphicToolStripMenuItem.Size = New Size(159, 24)
+        SaveGraphicToolStripMenuItem.Text = "Save Graphic"
+        ' 
+        ' SaveToolStripMenuItem
+        ' 
+        SaveToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SaveGraphicToolStripMenuItem, SaveResultToolStripMenuItem})
+        SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
+        SaveToolStripMenuItem.Size = New Size(180, 24)
+        SaveToolStripMenuItem.Text = "Save"
+        ' 
+        ' FileToolStripMenuItem
+        ' 
+        FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SaveToolStripMenuItem})
+        FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        FileToolStripMenuItem.Size = New Size(41, 23)
+        FileToolStripMenuItem.Text = "File"
+        ' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.Font = New Font("微软雅黑", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        MenuStrip1.Items.AddRange(New ToolStripItem() {FileToolStripMenuItem, ViewToolStripMenuItem})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Padding = New Padding(7, 2, 0, 2)
+        MenuStrip1.Size = New Size(850, 27)
+        MenuStrip1.TabIndex = 12
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' ViewToolStripMenuItem
+        ' 
+        ViewToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {IdiogramToolStripMenuItem})
+        ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
+        ViewToolStripMenuItem.Size = New Size(50, 23)
+        ViewToolStripMenuItem.Text = "View"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackColor = Color.Transparent
+        PictureBox1.BorderStyle = BorderStyle.FixedSingle
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Margin = New Padding(3, 4, 3, 4)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(818, 356)
+        PictureBox1.TabIndex = 0
+        PictureBox1.TabStop = False
+        ' 
+        ' MenuItem3
+        ' 
+        MenuItem3.Name = "MenuItem3"
+        MenuItem3.Size = New Size(152, 22)
+        MenuItem3.Text = "Refreash(&F)"
+        ' 
+        ' MenuItem4
+        ' 
+        MenuItem4.Name = "MenuItem4"
+        MenuItem4.Size = New Size(152, 22)
+        MenuItem4.Text = "Save Graphic"
+        ' 
+        ' MenuItem2
+        ' 
+        MenuItem2.Name = "MenuItem2"
+        MenuItem2.Size = New Size(152, 22)
+        MenuItem2.Text = "Idiogram"
+        ' 
+        ' ContextMenu2
+        ' 
+        ContextMenu2.Items.AddRange(New ToolStripItem() {MenuItem2, MenuItem4, MenuItem3})
+        ContextMenu2.Name = "ContextMenu2"
+        ContextMenu2.Size = New Size(153, 70)
+        ' 
+        ' MenuItem1
+        ' 
+        MenuItem1.Name = "MenuItem1"
+        MenuItem1.Size = New Size(145, 22)
+        MenuItem1.Text = "Save results"
+        ' 
+        ' ContextMenu1
+        ' 
+        ContextMenu1.Items.AddRange(New ToolStripItem() {MenuItem1})
+        ContextMenu1.Name = "ContextMenu1"
+        ContextMenu1.Size = New Size(146, 26)
+        ' 
+        ' RichTextBox1
+        ' 
+        RichTextBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        RichTextBox1.ContextMenuStrip = ContextMenu1
+        RichTextBox1.Location = New Point(234, 4)
+        RichTextBox1.Margin = New Padding(3, 4, 3, 4)
+        RichTextBox1.Name = "RichTextBox1"
+        RichTextBox1.Size = New Size(612, 246)
+        RichTextBox1.TabIndex = 9
+        RichTextBox1.Text = ""
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.BorderStyle = BorderStyle.FixedSingle
+        TextBox1.Font = New Font("宋体", 11F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox1.Location = New Point(11, 25)
+        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(51, 24)
+        TextBox1.TabIndex = 0
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(70, 25)
+        Button1.Margin = New Padding(3, 4, 3, 4)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(88, 31)
+        Button1.TabIndex = 1
+        Button1.Text = "Swap"
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.BorderStyle = BorderStyle.FixedSingle
+        TextBox2.Font = New Font("宋体", 11F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox2.Location = New Point(166, 25)
+        TextBox2.Margin = New Padding(3, 4, 3, 4)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(51, 24)
+        TextBox2.TabIndex = 0
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.Controls.Add(CheckBox1)
+        GroupBox1.Controls.Add(TextBox1)
+        GroupBox1.Controls.Add(Button1)
+        GroupBox1.Controls.Add(TextBox2)
+        GroupBox1.Location = New Point(3, 4)
+        GroupBox1.Margin = New Padding(3, 4, 3, 4)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Padding = New Padding(3, 4, 3, 4)
+        GroupBox1.Size = New Size(224, 102)
+        GroupBox1.TabIndex = 8
+        GroupBox1.TabStop = False
+        GroupBox1.Text = "Manual adjustment"
+        ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.Location = New Point(11, 63)
+        CheckBox1.Margin = New Padding(3, 4, 3, 4)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(93, 23)
+        CheckBox1.TabIndex = 2
+        CheckBox1.Text = "re-arrange"
+        CheckBox1.UseVisualStyleBackColor = True
+        ' 
+        ' SplitContainer1
+        ' 
+        SplitContainer1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        SplitContainer1.Location = New Point(0, 30)
+        SplitContainer1.Margin = New Padding(3, 4, 3, 4)
+        SplitContainer1.Name = "SplitContainer1"
+        SplitContainer1.Orientation = Orientation.Horizontal
+        ' 
+        ' SplitContainer1.Panel1
+        ' 
+        SplitContainer1.Panel1.Controls.Add(PictureBox1)
+        ' 
+        ' SplitContainer1.Panel2
+        ' 
+        SplitContainer1.Panel2.Controls.Add(GroupBox2)
+        SplitContainer1.Panel2.Controls.Add(GroupBox1)
+        SplitContainer1.Panel2.Controls.Add(RichTextBox1)
+        SplitContainer1.Size = New Size(850, 613)
+        SplitContainer1.SplitterDistance = 358
+        SplitContainer1.SplitterWidth = 5
+        SplitContainer1.TabIndex = 13
+        ' 
+        ' GroupBox2
+        ' 
+        GroupBox2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
+        GroupBox2.Controls.Add(NumericUpDown3)
+        GroupBox2.Controls.Add(Label3)
+        GroupBox2.Controls.Add(Button2)
+        GroupBox2.Controls.Add(NumericUpDown2)
+        GroupBox2.Controls.Add(NumericUpDown1)
+        GroupBox2.Controls.Add(Label2)
+        GroupBox2.Controls.Add(Label1)
+        GroupBox2.Location = New Point(3, 113)
+        GroupBox2.Margin = New Padding(3, 4, 3, 4)
+        GroupBox2.Name = "GroupBox2"
+        GroupBox2.Padding = New Padding(3, 4, 3, 4)
+        GroupBox2.Size = New Size(224, 134)
+        GroupBox2.TabIndex = 10
+        GroupBox2.TabStop = False
+        GroupBox2.Text = "Paint"
+        ' 
+        ' NumericUpDown3
+        ' 
+        NumericUpDown3.Location = New Point(166, 96)
+        NumericUpDown3.Margin = New Padding(3, 4, 3, 4)
+        NumericUpDown3.Name = "NumericUpDown3"
+        NumericUpDown3.Size = New Size(51, 25)
+        NumericUpDown3.TabIndex = 10
+        NumericUpDown3.Value = New Decimal(New Integer() {20, 0, 0, 0})
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(83, 99)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(76, 19)
+        Label3.TabIndex = 9
+        Label3.Text = "Arm width:"
+        ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(11, 91)
+        Button2.Margin = New Padding(3, 4, 3, 4)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(72, 31)
+        Button2.TabIndex = 8
+        Button2.Text = "Refresh"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' NumericUpDown2
+        ' 
+        NumericUpDown2.Location = New Point(166, 61)
+        NumericUpDown2.Margin = New Padding(3, 4, 3, 4)
+        NumericUpDown2.Name = "NumericUpDown2"
+        NumericUpDown2.Size = New Size(51, 25)
+        NumericUpDown2.TabIndex = 7
+        NumericUpDown2.Value = New Decimal(New Integer() {30, 0, 0, 0})
+        ' 
+        ' NumericUpDown1
+        ' 
+        NumericUpDown1.Location = New Point(166, 25)
+        NumericUpDown1.Margin = New Padding(3, 4, 3, 4)
+        NumericUpDown1.Name = "NumericUpDown1"
+        NumericUpDown1.Size = New Size(51, 25)
+        NumericUpDown1.TabIndex = 6
+        NumericUpDown1.Value = New Decimal(New Integer() {45, 0, 0, 0})
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(8, 63)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(146, 19)
+        Label2.TabIndex = 2
+        Label2.Text = "Space between group:"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(8, 25)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(131, 19)
+        Label1.TabIndex = 0
+        Label1.Text = "Space within group:"
+        ' 
+        ' Form_analysis
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 19F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(850, 642)
+        Controls.Add(SplitContainer1)
+        Controls.Add(MenuStrip1)
+        Font = New Font("微软雅黑", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        Margin = New Padding(3, 5, 3, 5)
+        Name = "Form_analysis"
+        Text = "Analysis"
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        ContextMenu2.ResumeLayout(False)
+        ContextMenu1.ResumeLayout(False)
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
+        SplitContainer1.Panel1.ResumeLayout(False)
+        SplitContainer1.Panel2.ResumeLayout(False)
+        CType(SplitContainer1, ComponentModel.ISupportInitialize).EndInit()
+        SplitContainer1.ResumeLayout(False)
+        GroupBox2.ResumeLayout(False)
+        GroupBox2.PerformLayout()
+        CType(NumericUpDown3, ComponentModel.ISupportInitialize).EndInit()
+        CType(NumericUpDown2, ComponentModel.ISupportInitialize).EndInit()
+        CType(NumericUpDown1, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 

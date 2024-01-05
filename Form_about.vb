@@ -5,8 +5,8 @@ Public Class Form_about
         Me.Hide()
     End Sub
 
-    Private Sub Form_about_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    Private Sub Form_about_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
         e.Cancel = True
-        Me.Hide()
+        Hide
     End Sub
 End Class

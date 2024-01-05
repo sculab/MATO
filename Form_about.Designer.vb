@@ -23,71 +23,73 @@ Partial Class Form_about
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_about))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.SuspendLayout()
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.Control
-        Me.TextBox1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(9, 62)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(466, 179)
-        Me.TextBox1.TabIndex = 5
-        Me.TextBox1.Text = resources.GetString("TextBox1.Text")
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(394, 247)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 24)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Close"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(9, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 33)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "MATO"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(9, 36)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(242, 18)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Meansurement and Analysis Tools"
-        '
-        'Form_about
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(484, 281)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label1)
-        Me.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Name = "Form_about"
-        Me.Text = "About"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        TextBox1 = New TextBox()
+        Button1 = New Button()
+        Label1 = New Label()
+        Label2 = New Label()
+        SuspendLayout()
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.BackColor = SystemColors.Control
+        TextBox1.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox1.Location = New Point(10, 74)
+        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Multiline = True
+        TextBox1.Name = "TextBox1"
+        TextBox1.ReadOnly = True
+        TextBox1.Size = New Size(472, 154)
+        TextBox1.TabIndex = 5
+        TextBox1.Text = resources.GetString("TextBox1.Text")
+        ' 
+        ' Button1
+        ' 
+        Button1.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Button1.Location = New Point(396, 236)
+        Button1.Margin = New Padding(3, 4, 3, 4)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(86, 28)
+        Button1.TabIndex = 4
+        Button1.Text = "Close"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Arial Black", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Location = New Point(10, 4)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(91, 33)
+        Label1.TabIndex = 3
+        Label1.Text = "MATO"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.Location = New Point(10, 43)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(242, 18)
+        Label2.TabIndex = 6
+        Label2.Text = "Meansurement and Analysis Tools"
+        ' 
+        ' Form_about
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 19F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(488, 291)
+        Controls.Add(Label2)
+        Controls.Add(TextBox1)
+        Controls.Add(Button1)
+        Controls.Add(Label1)
+        Font = New Font("微软雅黑", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        FormBorderStyle = FormBorderStyle.FixedToolWindow
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        Margin = New Padding(3, 5, 3, 5)
+        Name = "Form_about"
+        Text = "About"
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 

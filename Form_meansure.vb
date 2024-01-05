@@ -963,6 +963,8 @@ Public Class Form_meansure
                 KaryotypeToolStripMenuItem.Checked = False
                 TabPage2.Parent = Nothing
                 TabPage1.Parent = TabControl1
+                ListView1.Visible = False
+                ListView2.Visible = True
 
                 TS_Group.Visible = False
                 TS_Count.Visible = True
@@ -982,7 +984,8 @@ Public Class Form_meansure
                 KaryotypeToolStripMenuItem.Checked = True
                 TabPage1.Parent = Nothing
                 TabPage2.Parent = TabControl1
-
+                ListView1.Visible = True
+                ListView2.Visible = False
                 TS_Group.Visible = True
                 TS_Count.Visible = False
                 TS_Angle.Visible = False
@@ -1288,12 +1291,7 @@ Public Class Form_meansure
             End If
             Picture.Cursor = Cursors.Cross
             operate = "lines"
-            Select Case local_language
-                Case "ch"
-                    ListView1.Text = "长度"
-                Case Else
-                    ListView1.Text = "Length"
-            End Select
+            ListView1.Text = "Length"
             has_record = False
             Me.ToolStripStatusLabel1.Text = "Tracing length"
         Else
@@ -1326,13 +1324,9 @@ Public Class Form_meansure
 
             Picture.Cursor = Cursors.Cross
             operate = "size"
-            Select Case local_language
-                Case "ch"
-                    ListView1.Text = "面积"
-                Case Else
-                    ListView1.Text = "Size"
 
-            End Select
+            ListView1.Text = "Size"
+
             has_record = False
             Me.ToolStripStatusLabel1.Text = "Tracing size"
         Else
@@ -1717,12 +1711,6 @@ Public Class Form_meansure
 
     End Sub
 
-    Private Sub Form_main_ResizeEnd(sender As Object, e As EventArgs) Handles MyBase.ResizeEnd
-        If SplitContainer1.Width > 574 Then
-            SplitContainer1.SplitterDistance = SplitContainer1.Width - 231
-
-        End If
-    End Sub
 
     Private Sub Form_main_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
 
@@ -2280,6 +2268,8 @@ Public Class Form_meansure
                 mode_type = 1
                 TabPage1.Parent = Nothing
                 TabPage2.Parent = TabControl1
+                ListView1.Visible = True
+                ListView2.Visible = False
                 KaryotypeToolStripMenuItem.Checked = True
                 TS_Group.Visible = True
                 TS_Count.Visible = False
@@ -2310,6 +2300,9 @@ Public Class Form_meansure
                 mode_type = 0
                 TabPage2.Parent = Nothing
                 TabPage1.Parent = TabControl1
+                ListView2.Visible = True
+                ListView1.Visible = False
+
                 KaryotypeToolStripMenuItem.Checked = False
                 TS_Group.Visible = False
                 TS_Count.Visible = True
@@ -2503,13 +2496,9 @@ Public Class Form_meansure
 
             Picture.Cursor = Cursors.Cross
             operate = "color"
-            Select Case local_language
-                Case "ch"
-                    ListView1.Text = "颜色"
-                Case Else
-                    ListView1.Text = "Color"
 
-            End Select
+            ListView1.Text = "Color"
+
             has_record = False
             Me.ToolStripStatusLabel1.Text = "Tracing color"
         Else

@@ -22,320 +22,331 @@ Partial Class Form_scale
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_scale))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        ' TODO ContextMenu is no longer supported. Use ContextMenuStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-        Me.ContextMenu1 = New System.Windows.Forms.ContextMenuStrip
-        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-        Me.MenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-        Me.MenuItem2 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox0 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.OperationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.MenuStrip1.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Location = New System.Drawing.Point(105, 244)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(65, 22)
-        Me.TextBox1.TabIndex = 11
-        Me.TextBox1.Text = "1"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Location = New System.Drawing.Point(105, 273)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(65, 22)
-        Me.TextBox2.TabIndex = 12
-        Me.TextBox2.Text = "10"
-        '
-        'ContextMenu1
-        '
-        ' TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
-        Me.ContextMenu1.Items.AddRange(New ToolStripItem() {Me.MenuItem1, Me.MenuItem2})
+        TextBox1 = New TextBox()
+        TextBox2 = New TextBox()
+        ContextMenu1 = New ContextMenuStrip(components)
+        MenuItem1 = New ToolStripMenuItem()
+        MenuItem2 = New ToolStripMenuItem()
+        ComboBox1 = New ComboBox()
+        Button2 = New Button()
+        ListView1 = New ListView()
+        ColumnHeader1 = New ColumnHeader()
+        ColumnHeader2 = New ColumnHeader()
+        ColumnHeader3 = New ColumnHeader()
+        ColumnHeader4 = New ColumnHeader()
+        ColumnHeader5 = New ColumnHeader()
+        ColumnHeader6 = New ColumnHeader()
+        Button3 = New Button()
+        Label3 = New Label()
+        Label5 = New Label()
+        Label1 = New Label()
+        Label2 = New Label()
+        TextBox0 = New TextBox()
+        Label4 = New Label()
+        Label6 = New Label()
+        TextBox5 = New TextBox()
+        TextBox4 = New TextBox()
+        Button5 = New Button()
+        MenuStrip1 = New MenuStrip()
+        OperationToolStripMenuItem = New ToolStripMenuItem()
+        AddToolStripMenuItem = New ToolStripMenuItem()
+        DeleteToolStripMenuItem = New ToolStripMenuItem()
+        Button1 = New Button()
+        ContextMenu1.SuspendLayout()
+        MenuStrip1.SuspendLayout()
+        SuspendLayout()
         ' 
-        'ContextMenuStrip1.Items.AddRange(New ToolStripItem() {全选ToolStripMenuItem, 反选ToolStripMenuItem1, 全不选ToolStripMenuItem, ToolStripSeparator6, 清空数据ToolStripMenuItem})
-        '
-        'MenuItem1
-        '
-        'Me.MenuItem1.Index = 0
-        Me.MenuItem1.Text = "Delete"
-        '
-        'MenuItem2
-        '
-        'Me.MenuItem2.Index = 1
-        Me.MenuItem2.Text = "Rename"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ComboBox1.Items.AddRange(New Object() {"um", "mm", "cm", "px"})
-        Me.ComboBox1.Location = New System.Drawing.Point(224, 272)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(65, 24)
-        Me.ComboBox1.TabIndex = 21
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(152, 309)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(64, 26)
-        Me.Button2.TabIndex = 20
-        Me.Button2.Text = "Apply"
-        '
-        'ListView1
-        '
-        Me.ListView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
-        Me.ListView1.ContextMenuStrip = Me.ContextMenu1
-        Me.ListView1.FullRowSelect = True
-        Me.ListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(0, 27)
-        Me.ListView1.MultiSelect = False
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(363, 184)
-        Me.ListView1.TabIndex = 16
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "Title"
-        Me.ColumnHeader1.Width = 80
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "Pixel"
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "Length"
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "Unit"
-        Me.ColumnHeader4.Width = 50
-        '
-        'ColumnHeader5
-        '
-        Me.ColumnHeader5.Text = "Size"
-        Me.ColumnHeader5.Width = 50
-        '
-        'ColumnHeader6
-        '
-        Me.ColumnHeader6.Text = "Radio"
-        Me.ColumnHeader6.Width = 50
-        '
-        'Button3
-        '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Location = New System.Drawing.Point(10, 309)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(64, 26)
-        Me.Button3.TabIndex = 22
-        Me.Button3.Text = "Reset"
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(179, 276)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(30, 16)
-        Me.Label3.TabIndex = 24
-        Me.Label3.Text = "Unit"
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(7, 247)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(86, 16)
-        Me.Label5.TabIndex = 25
-        Me.Label5.Text = "Width in pixel"
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(7, 276)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 16)
-        Me.Label1.TabIndex = 26
-        Me.Label1.Text = "Actual length"
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(179, 247)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(33, 16)
-        Me.Label2.TabIndex = 27
-        Me.Label2.Text = "Size"
-        '
-        'TextBox0
-        '
-        Me.TextBox0.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TextBox0.Location = New System.Drawing.Point(45, 216)
-        Me.TextBox0.Name = "TextBox0"
-        Me.TextBox0.Size = New System.Drawing.Size(125, 22)
-        Me.TextBox0.TabIndex = 28
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(7, 219)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(31, 16)
-        Me.Label4.TabIndex = 29
-        Me.Label4.Text = "Title"
-        '
-        'Label6
-        '
-        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(179, 219)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(40, 16)
-        Me.Label6.TabIndex = 30
-        Me.Label6.Text = "Radio"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TextBox5.Location = New System.Drawing.Point(224, 216)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(65, 22)
-        Me.TextBox5.TabIndex = 31
-        Me.TextBox5.Text = "1"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TextBox4.Location = New System.Drawing.Point(224, 244)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(65, 22)
-        Me.TextBox4.TabIndex = 32
-        Me.TextBox4.Text = "10"
-        '
-        'Button5
-        '
-        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button5.Location = New System.Drawing.Point(81, 309)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(64, 26)
-        Me.Button5.TabIndex = 33
-        Me.Button5.Text = "Save"
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OperationToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(364, 25)
-        Me.MenuStrip1.TabIndex = 34
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'OperationToolStripMenuItem
-        '
-        Me.OperationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.DeleteToolStripMenuItem})
-        Me.OperationToolStripMenuItem.Name = "OperationToolStripMenuItem"
-        Me.OperationToolStripMenuItem.Size = New System.Drawing.Size(79, 21)
-        Me.OperationToolStripMenuItem.Text = "Operation"
-        '
-        'AddToolStripMenuItem
-        '
-        Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
-        Me.AddToolStripMenuItem.Text = "New Scale"
-        '
-        'DeleteToolStripMenuItem
-        '
-        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
-        Me.DeleteToolStripMenuItem.Text = "Delete"
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(223, 309)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(64, 26)
-        Me.Button1.TabIndex = 35
-        Me.Button1.Text = "Close"
-        '
-        'Form_scale
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(364, 340)
-        Me.ControlBox = False
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox0)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Name = "Form_scale"
-        Me.Text = "Scale"
-        Me.TopMost = True
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        ' TextBox1
+        ' 
+        TextBox1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        TextBox1.Location = New Point(120, 290)
+        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(74, 25)
+        TextBox1.TabIndex = 11
+        TextBox1.Text = "1"
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        TextBox2.Location = New Point(120, 324)
+        TextBox2.Margin = New Padding(3, 4, 3, 4)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(74, 25)
+        TextBox2.TabIndex = 12
+        TextBox2.Text = "10"
+        ' 
+        ' ContextMenu1
+        ' 
+        ContextMenu1.Items.AddRange(New ToolStripItem() {MenuItem1, MenuItem2})
+        ContextMenu1.Name = "ContextMenu1"
+        ContextMenu1.Size = New Size(124, 48)
+        ' 
+        ' MenuItem1
+        ' 
+        MenuItem1.Name = "MenuItem1"
+        MenuItem1.Size = New Size(123, 22)
+        MenuItem1.Text = "Delete"
+        ' 
+        ' MenuItem2
+        ' 
+        MenuItem2.Name = "MenuItem2"
+        MenuItem2.Size = New Size(123, 22)
+        MenuItem2.Text = "Rename"
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        ComboBox1.Items.AddRange(New Object() {"um", "mm", "cm", "px"})
+        ComboBox1.Location = New Point(256, 323)
+        ComboBox1.Margin = New Padding(3, 4, 3, 4)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(74, 27)
+        ComboBox1.TabIndex = 21
+        ' 
+        ' Button2
+        ' 
+        Button2.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Button2.Location = New Point(174, 367)
+        Button2.Margin = New Padding(3, 4, 3, 4)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(73, 31)
+        Button2.TabIndex = 20
+        Button2.Text = "Apply"
+        ' 
+        ' ListView1
+        ' 
+        ListView1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        ListView1.Columns.AddRange(New ColumnHeader() {ColumnHeader1, ColumnHeader2, ColumnHeader3, ColumnHeader4, ColumnHeader5, ColumnHeader6})
+        ListView1.ContextMenuStrip = ContextMenu1
+        ListView1.FullRowSelect = True
+        ListView1.HeaderStyle = ColumnHeaderStyle.Nonclickable
+        ListView1.Location = New Point(0, 32)
+        ListView1.Margin = New Padding(3, 4, 3, 4)
+        ListView1.MultiSelect = False
+        ListView1.Name = "ListView1"
+        ListView1.Size = New Size(414, 218)
+        ListView1.TabIndex = 16
+        ListView1.UseCompatibleStateImageBehavior = False
+        ListView1.View = View.Details
+        ' 
+        ' ColumnHeader1
+        ' 
+        ColumnHeader1.Text = "Title"
+        ColumnHeader1.Width = 80
+        ' 
+        ' ColumnHeader2
+        ' 
+        ColumnHeader2.Text = "Pixel"
+        ' 
+        ' ColumnHeader3
+        ' 
+        ColumnHeader3.Text = "Length"
+        ' 
+        ' ColumnHeader4
+        ' 
+        ColumnHeader4.Text = "Unit"
+        ColumnHeader4.Width = 50
+        ' 
+        ' ColumnHeader5
+        ' 
+        ColumnHeader5.Text = "Size"
+        ColumnHeader5.Width = 50
+        ' 
+        ' ColumnHeader6
+        ' 
+        ColumnHeader6.Text = "Radio"
+        ColumnHeader6.Width = 50
+        ' 
+        ' Button3
+        ' 
+        Button3.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Button3.Location = New Point(11, 367)
+        Button3.Margin = New Padding(3, 4, 3, 4)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(73, 31)
+        Button3.TabIndex = 22
+        Button3.Text = "Reset"
+        ' 
+        ' Label3
+        ' 
+        Label3.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Label3.AutoSize = True
+        Label3.Location = New Point(205, 328)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(35, 19)
+        Label3.TabIndex = 24
+        Label3.Text = "Unit"
+        ' 
+        ' Label5
+        ' 
+        Label5.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Label5.AutoSize = True
+        Label5.Location = New Point(8, 293)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(93, 19)
+        Label5.TabIndex = 25
+        Label5.Text = "Width in pixel"
+        ' 
+        ' Label1
+        ' 
+        Label1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Label1.AutoSize = True
+        Label1.Location = New Point(8, 328)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(91, 19)
+        Label1.TabIndex = 26
+        Label1.Text = "Actual length"
+        ' 
+        ' Label2
+        ' 
+        Label2.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Label2.AutoSize = True
+        Label2.Location = New Point(205, 293)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(33, 19)
+        Label2.TabIndex = 27
+        Label2.Text = "Size"
+        ' 
+        ' TextBox0
+        ' 
+        TextBox0.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        TextBox0.Location = New Point(51, 256)
+        TextBox0.Margin = New Padding(3, 4, 3, 4)
+        TextBox0.Name = "TextBox0"
+        TextBox0.Size = New Size(142, 25)
+        TextBox0.TabIndex = 28
+        ' 
+        ' Label4
+        ' 
+        Label4.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Label4.AutoSize = True
+        Label4.Location = New Point(8, 260)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(34, 19)
+        Label4.TabIndex = 29
+        Label4.Text = "Title"
+        ' 
+        ' Label6
+        ' 
+        Label6.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Label6.AutoSize = True
+        Label6.Location = New Point(205, 260)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(43, 19)
+        Label6.TabIndex = 30
+        Label6.Text = "Radio"
+        ' 
+        ' TextBox5
+        ' 
+        TextBox5.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        TextBox5.Location = New Point(256, 256)
+        TextBox5.Margin = New Padding(3, 4, 3, 4)
+        TextBox5.Name = "TextBox5"
+        TextBox5.ReadOnly = True
+        TextBox5.Size = New Size(74, 25)
+        TextBox5.TabIndex = 31
+        TextBox5.Text = "1"
+        ' 
+        ' TextBox4
+        ' 
+        TextBox4.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        TextBox4.Location = New Point(256, 290)
+        TextBox4.Margin = New Padding(3, 4, 3, 4)
+        TextBox4.Name = "TextBox4"
+        TextBox4.Size = New Size(74, 25)
+        TextBox4.TabIndex = 32
+        TextBox4.Text = "10"
+        ' 
+        ' Button5
+        ' 
+        Button5.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Button5.Location = New Point(93, 367)
+        Button5.Margin = New Padding(3, 4, 3, 4)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(73, 31)
+        Button5.TabIndex = 33
+        Button5.Text = "Save"
+        ' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.Font = New Font("微软雅黑", 10.5F, FontStyle.Regular, GraphicsUnit.Point)
+        MenuStrip1.Items.AddRange(New ToolStripItem() {OperationToolStripMenuItem})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Padding = New Padding(7, 2, 0, 2)
+        MenuStrip1.Size = New Size(416, 28)
+        MenuStrip1.TabIndex = 34
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' OperationToolStripMenuItem
+        ' 
+        OperationToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddToolStripMenuItem, DeleteToolStripMenuItem})
+        OperationToolStripMenuItem.Name = "OperationToolStripMenuItem"
+        OperationToolStripMenuItem.Size = New Size(89, 24)
+        OperationToolStripMenuItem.Text = "Operation"
+        ' 
+        ' AddToolStripMenuItem
+        ' 
+        AddToolStripMenuItem.Name = "AddToolStripMenuItem"
+        AddToolStripMenuItem.Size = New Size(147, 24)
+        AddToolStripMenuItem.Text = "New Scale"
+        ' 
+        ' DeleteToolStripMenuItem
+        ' 
+        DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        DeleteToolStripMenuItem.Size = New Size(147, 24)
+        DeleteToolStripMenuItem.Text = "Delete"
+        ' 
+        ' Button1
+        ' 
+        Button1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Button1.Location = New Point(255, 367)
+        Button1.Margin = New Padding(3, 4, 3, 4)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(73, 31)
+        Button1.TabIndex = 35
+        Button1.Text = "Close"
+        ' 
+        ' Form_scale
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 19F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(416, 404)
+        ControlBox = False
+        Controls.Add(Button1)
+        Controls.Add(Button5)
+        Controls.Add(TextBox4)
+        Controls.Add(TextBox5)
+        Controls.Add(Label6)
+        Controls.Add(Label4)
+        Controls.Add(TextBox0)
+        Controls.Add(Label2)
+        Controls.Add(Label1)
+        Controls.Add(Label5)
+        Controls.Add(Label3)
+        Controls.Add(TextBox1)
+        Controls.Add(TextBox2)
+        Controls.Add(Button3)
+        Controls.Add(ComboBox1)
+        Controls.Add(Button2)
+        Controls.Add(ListView1)
+        Controls.Add(MenuStrip1)
+        Font = New Font("微软雅黑", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        FormBorderStyle = FormBorderStyle.FixedToolWindow
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        MainMenuStrip = MenuStrip1
+        Margin = New Padding(3, 5, 3, 5)
+        Name = "Form_scale"
+        Text = "Scale"
+        TopMost = True
+        ContextMenu1.ResumeLayout(False)
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
     Friend WithEvents TextBox1 As TextBox

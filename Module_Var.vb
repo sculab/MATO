@@ -5,7 +5,7 @@ Imports System.Runtime.InteropServices
 Imports System.Globalization.CultureInfo
 Module Module_Var
     Public Version As String = "4.3"
-    Public build As String = "20231226"
+    Public build As String = "20240105"
     Public enableMin As Boolean = True
     Public Global_seed As Integer = "20180127"
     Public isDebug As Boolean = False
@@ -28,28 +28,12 @@ Module Module_Var
     Public sdec_lg As String
     Public current_dir As String
     Public final_tree As String = ""
-    'Public tree_wo_value As String = ""
-    'Public MainWindow As New Form_Main
-    'Public Lagrange_Config As New Config_Lagrange
-    'Public BGB_Config As New Config_BGB
-    'Public DPPdiv_Config As New Tool_DPP
-    'Public DIVAForm As New Config_SDIVA
     Public RangeMade As Boolean = False
     Public Lag_con_made As Boolean = False
     Public BGB_con_made As Boolean = False
     Public RangeStr As String = ""
     Public Tree_Node_Num As Integer
     Public Select_Node_Num As Integer
-    'Public BayesForm As New Config_BBM
-    'Public TracerForm As New View_Tracer
-    'Public CombineForm As New Tool_Combine
-    'Public SvTForm As New Tool_SvT
-    'Public TvSForm As New Tool_TvS
-    'Public BayAreaForm As New Config_BayArea
-    'Public TraitsForm As New Config_Traits
-    'Public ChromForm As New Config_Chrom
-    'Public OptionForm As New View_Option
-    'Public TraitsView As New View_Dis
     Public ClusterForm As Boolean = False
     Public state_mode As Integer = 0
     Public Config_BayArea_Burnin As Integer = 0
