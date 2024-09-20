@@ -1918,23 +1918,43 @@ Public Class Form_meansure
 
 
                 Dim sfd As New SaveFileDialog
-                sfd.Filter = "PNG Files(*.png)|*.png;*.PNG|JPEG Files(*.png)|*.jpg;*.JPG|Bitmap Files(*.bmp)|*.bmp;*.BMP|ALL Files(*.*)|*.*"
+                sfd.Filter = "PNG Files (*.png)|*.png|JPEG Files (*.jpg)|*.jpg|Bitmap Files (*.bmp)|*.bmp|ALL Files (*.*)|*.*"
                 sfd.FileName = ""
                 sfd.DefaultExt = ".png"
                 sfd.CheckPathExists = True
+
                 Dim resultdialog As DialogResult = sfd.ShowDialog()
                 If resultdialog = DialogResult.OK Then
-                    Dim my_bitmap As New Bitmap(Picture.Image) ', Picture.Width, Picture.Height)
+                    Dim my_bitmap As New Bitmap(Picture.Image) ' 创建一个基于Picture控件的Bitmap对象
                     Dim temp_zoom As Single = zoom_radio
-                    zoom_radio = 1
+                    zoom_radio = 1 ' 重置缩放比例
                     TempGrap = Graphics.FromImage(my_bitmap)
+
+                    ' 根据mode_type调用不同的绘制方法
                     Select Case mode_type
                         Case 0
                             draw_lines(TempGrap, 1 / temp_zoom, ListView2)
                         Case 1
                             draw_lines(TempGrap, 1 / temp_zoom, ListView1)
                     End Select
-                    my_bitmap.Save(sfd.FileName)
+
+                    ' 获取用户选择的文件扩展名
+                    Dim fileExtension As String = System.IO.Path.GetExtension(sfd.FileName).ToLower()
+
+                    ' 根据文件扩展名选择正确的图像格式进行保存
+                    Select Case fileExtension
+                        Case ".png"
+                            my_bitmap.Save(sfd.FileName, Imaging.ImageFormat.Png)
+                        Case ".jpg", ".jpeg"
+                            my_bitmap.Save(sfd.FileName, Imaging.ImageFormat.Jpeg)
+                        Case ".bmp"
+                            my_bitmap.Save(sfd.FileName, Imaging.ImageFormat.Bmp)
+                        Case Else
+                            ' 如果扩展名未知，则默认保存为PNG
+                            my_bitmap.Save(sfd.FileName, Imaging.ImageFormat.Png)
+                    End Select
+
+                    ' 还原缩放比例
                     zoom_radio = temp_zoom
                     my_bitmap.Dispose()
                     Picture.Refresh()

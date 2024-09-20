@@ -71,43 +71,44 @@ Partial Class Form_analysis
         ' IdiogramToolStripMenuItem
         ' 
         IdiogramToolStripMenuItem.Name = "IdiogramToolStripMenuItem"
-        IdiogramToolStripMenuItem.Size = New Size(180, 24)
+        IdiogramToolStripMenuItem.Size = New Size(168, 28)
         IdiogramToolStripMenuItem.Text = "Idiogram"
         ' 
         ' SaveResultToolStripMenuItem
         ' 
         SaveResultToolStripMenuItem.Name = "SaveResultToolStripMenuItem"
-        SaveResultToolStripMenuItem.Size = New Size(159, 24)
+        SaveResultToolStripMenuItem.Size = New Size(200, 28)
         SaveResultToolStripMenuItem.Text = "Save Result"
         ' 
         ' SaveGraphicToolStripMenuItem
         ' 
         SaveGraphicToolStripMenuItem.Name = "SaveGraphicToolStripMenuItem"
-        SaveGraphicToolStripMenuItem.Size = New Size(159, 24)
+        SaveGraphicToolStripMenuItem.Size = New Size(200, 28)
         SaveGraphicToolStripMenuItem.Text = "Save Graphic"
         ' 
         ' SaveToolStripMenuItem
         ' 
         SaveToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SaveGraphicToolStripMenuItem, SaveResultToolStripMenuItem})
         SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        SaveToolStripMenuItem.Size = New Size(180, 24)
+        SaveToolStripMenuItem.Size = New Size(132, 28)
         SaveToolStripMenuItem.Text = "Save"
         ' 
         ' FileToolStripMenuItem
         ' 
         FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SaveToolStripMenuItem})
         FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        FileToolStripMenuItem.Size = New Size(41, 23)
+        FileToolStripMenuItem.Size = New Size(53, 27)
         FileToolStripMenuItem.Text = "File"
         ' 
         ' MenuStrip1
         ' 
         MenuStrip1.Font = New Font("微软雅黑", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        MenuStrip1.ImageScalingSize = New Size(20, 20)
         MenuStrip1.Items.AddRange(New ToolStripItem() {FileToolStripMenuItem, ViewToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Padding = New Padding(7, 2, 0, 2)
-        MenuStrip1.Size = New Size(850, 27)
+        MenuStrip1.Size = New Size(850, 31)
         MenuStrip1.TabIndex = 12
         MenuStrip1.Text = "MenuStrip1"
         ' 
@@ -115,7 +116,7 @@ Partial Class Form_analysis
         ' 
         ViewToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {IdiogramToolStripMenuItem})
         ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        ViewToolStripMenuItem.Size = New Size(50, 23)
+        ViewToolStripMenuItem.Size = New Size(64, 27)
         ViewToolStripMenuItem.Text = "View"
         ' 
         ' PictureBox1
@@ -132,47 +133,49 @@ Partial Class Form_analysis
         ' MenuItem3
         ' 
         MenuItem3.Name = "MenuItem3"
-        MenuItem3.Size = New Size(152, 22)
+        MenuItem3.Size = New Size(172, 24)
         MenuItem3.Text = "Refreash(&F)"
         ' 
         ' MenuItem4
         ' 
         MenuItem4.Name = "MenuItem4"
-        MenuItem4.Size = New Size(152, 22)
+        MenuItem4.Size = New Size(172, 24)
         MenuItem4.Text = "Save Graphic"
         ' 
         ' MenuItem2
         ' 
         MenuItem2.Name = "MenuItem2"
-        MenuItem2.Size = New Size(152, 22)
+        MenuItem2.Size = New Size(172, 24)
         MenuItem2.Text = "Idiogram"
         ' 
         ' ContextMenu2
         ' 
+        ContextMenu2.ImageScalingSize = New Size(20, 20)
         ContextMenu2.Items.AddRange(New ToolStripItem() {MenuItem2, MenuItem4, MenuItem3})
         ContextMenu2.Name = "ContextMenu2"
-        ContextMenu2.Size = New Size(153, 70)
+        ContextMenu2.Size = New Size(173, 76)
         ' 
         ' MenuItem1
         ' 
         MenuItem1.Name = "MenuItem1"
-        MenuItem1.Size = New Size(145, 22)
+        MenuItem1.Size = New Size(164, 24)
         MenuItem1.Text = "Save results"
         ' 
         ' ContextMenu1
         ' 
+        ContextMenu1.ImageScalingSize = New Size(20, 20)
         ContextMenu1.Items.AddRange(New ToolStripItem() {MenuItem1})
         ContextMenu1.Name = "ContextMenu1"
-        ContextMenu1.Size = New Size(146, 26)
+        ContextMenu1.Size = New Size(165, 28)
         ' 
         ' RichTextBox1
         ' 
         RichTextBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         RichTextBox1.ContextMenuStrip = ContextMenu1
-        RichTextBox1.Location = New Point(234, 4)
+        RichTextBox1.Location = New Point(272, 4)
         RichTextBox1.Margin = New Padding(3, 4, 3, 4)
         RichTextBox1.Name = "RichTextBox1"
-        RichTextBox1.Size = New Size(612, 246)
+        RichTextBox1.Size = New Size(574, 242)
         RichTextBox1.TabIndex = 9
         RichTextBox1.Text = ""
         ' 
@@ -183,12 +186,12 @@ Partial Class Form_analysis
         TextBox1.Location = New Point(11, 25)
         TextBox1.Margin = New Padding(3, 4, 3, 4)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(51, 24)
+        TextBox1.Size = New Size(74, 28)
         TextBox1.TabIndex = 0
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(70, 25)
+        Button1.Location = New Point(91, 24)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
         Button1.Size = New Size(88, 31)
@@ -199,10 +202,10 @@ Partial Class Form_analysis
         ' 
         TextBox2.BorderStyle = BorderStyle.FixedSingle
         TextBox2.Font = New Font("宋体", 11F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox2.Location = New Point(166, 25)
+        TextBox2.Location = New Point(185, 25)
         TextBox2.Margin = New Padding(3, 4, 3, 4)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(51, 24)
+        TextBox2.Size = New Size(72, 28)
         TextBox2.TabIndex = 0
         ' 
         ' GroupBox1
@@ -215,7 +218,7 @@ Partial Class Form_analysis
         GroupBox1.Margin = New Padding(3, 4, 3, 4)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(3, 4, 3, 4)
-        GroupBox1.Size = New Size(224, 102)
+        GroupBox1.Size = New Size(263, 102)
         GroupBox1.TabIndex = 8
         GroupBox1.TabStop = False
         GroupBox1.Text = "Manual adjustment"
@@ -226,7 +229,7 @@ Partial Class Form_analysis
         CheckBox1.Location = New Point(11, 63)
         CheckBox1.Margin = New Padding(3, 4, 3, 4)
         CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(93, 23)
+        CheckBox1.Size = New Size(116, 27)
         CheckBox1.TabIndex = 2
         CheckBox1.Text = "re-arrange"
         CheckBox1.UseVisualStyleBackColor = True
@@ -267,54 +270,54 @@ Partial Class Form_analysis
         GroupBox2.Margin = New Padding(3, 4, 3, 4)
         GroupBox2.Name = "GroupBox2"
         GroupBox2.Padding = New Padding(3, 4, 3, 4)
-        GroupBox2.Size = New Size(224, 134)
+        GroupBox2.Size = New Size(263, 133)
         GroupBox2.TabIndex = 10
         GroupBox2.TabStop = False
         GroupBox2.Text = "Paint"
         ' 
         ' NumericUpDown3
         ' 
-        NumericUpDown3.Location = New Point(166, 96)
+        NumericUpDown3.Location = New Point(206, 96)
         NumericUpDown3.Margin = New Padding(3, 4, 3, 4)
         NumericUpDown3.Name = "NumericUpDown3"
-        NumericUpDown3.Size = New Size(51, 25)
+        NumericUpDown3.Size = New Size(51, 29)
         NumericUpDown3.TabIndex = 10
         NumericUpDown3.Value = New Decimal(New Integer() {20, 0, 0, 0})
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(83, 99)
+        Label3.Location = New Point(102, 98)
         Label3.Name = "Label3"
-        Label3.Size = New Size(76, 19)
+        Label3.Size = New Size(98, 23)
         Label3.TabIndex = 9
         Label3.Text = "Arm width:"
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(11, 91)
+        Button2.Location = New Point(6, 93)
         Button2.Margin = New Padding(3, 4, 3, 4)
         Button2.Name = "Button2"
-        Button2.Size = New Size(72, 31)
+        Button2.Size = New Size(85, 31)
         Button2.TabIndex = 8
         Button2.Text = "Refresh"
         Button2.UseVisualStyleBackColor = True
         ' 
         ' NumericUpDown2
         ' 
-        NumericUpDown2.Location = New Point(166, 61)
+        NumericUpDown2.Location = New Point(206, 61)
         NumericUpDown2.Margin = New Padding(3, 4, 3, 4)
         NumericUpDown2.Name = "NumericUpDown2"
-        NumericUpDown2.Size = New Size(51, 25)
+        NumericUpDown2.Size = New Size(51, 29)
         NumericUpDown2.TabIndex = 7
         NumericUpDown2.Value = New Decimal(New Integer() {30, 0, 0, 0})
         ' 
         ' NumericUpDown1
         ' 
-        NumericUpDown1.Location = New Point(166, 25)
+        NumericUpDown1.Location = New Point(206, 25)
         NumericUpDown1.Margin = New Padding(3, 4, 3, 4)
         NumericUpDown1.Name = "NumericUpDown1"
-        NumericUpDown1.Size = New Size(51, 25)
+        NumericUpDown1.Size = New Size(51, 29)
         NumericUpDown1.TabIndex = 6
         NumericUpDown1.Value = New Decimal(New Integer() {45, 0, 0, 0})
         ' 
@@ -323,7 +326,7 @@ Partial Class Form_analysis
         Label2.AutoSize = True
         Label2.Location = New Point(8, 63)
         Label2.Name = "Label2"
-        Label2.Size = New Size(146, 19)
+        Label2.Size = New Size(192, 23)
         Label2.TabIndex = 2
         Label2.Text = "Space between group:"
         ' 
@@ -332,13 +335,13 @@ Partial Class Form_analysis
         Label1.AutoSize = True
         Label1.Location = New Point(8, 25)
         Label1.Name = "Label1"
-        Label1.Size = New Size(131, 19)
+        Label1.Size = New Size(171, 23)
         Label1.TabIndex = 0
         Label1.Text = "Space within group:"
         ' 
         ' Form_analysis
         ' 
-        AutoScaleDimensions = New SizeF(8F, 19F)
+        AutoScaleDimensions = New SizeF(10F, 21F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(850, 642)
         Controls.Add(SplitContainer1)

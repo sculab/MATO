@@ -61,49 +61,50 @@ Partial Class Form_scale
         ' TextBox1
         ' 
         TextBox1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        TextBox1.Location = New Point(120, 290)
+        TextBox1.Location = New Point(173, 291)
         TextBox1.Margin = New Padding(3, 4, 3, 4)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(74, 25)
+        TextBox1.Size = New Size(74, 29)
         TextBox1.TabIndex = 11
         TextBox1.Text = "1"
         ' 
         ' TextBox2
         ' 
         TextBox2.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        TextBox2.Location = New Point(120, 324)
+        TextBox2.Location = New Point(173, 324)
         TextBox2.Margin = New Padding(3, 4, 3, 4)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(74, 25)
+        TextBox2.Size = New Size(74, 29)
         TextBox2.TabIndex = 12
         TextBox2.Text = "10"
         ' 
         ' ContextMenu1
         ' 
+        ContextMenu1.ImageScalingSize = New Size(20, 20)
         ContextMenu1.Items.AddRange(New ToolStripItem() {MenuItem1, MenuItem2})
         ContextMenu1.Name = "ContextMenu1"
-        ContextMenu1.Size = New Size(124, 48)
+        ContextMenu1.Size = New Size(138, 52)
         ' 
         ' MenuItem1
         ' 
         MenuItem1.Name = "MenuItem1"
-        MenuItem1.Size = New Size(123, 22)
+        MenuItem1.Size = New Size(137, 24)
         MenuItem1.Text = "Delete"
         ' 
         ' MenuItem2
         ' 
         MenuItem2.Name = "MenuItem2"
-        MenuItem2.Size = New Size(123, 22)
+        MenuItem2.Size = New Size(137, 24)
         MenuItem2.Text = "Rename"
         ' 
         ' ComboBox1
         ' 
         ComboBox1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         ComboBox1.Items.AddRange(New Object() {"um", "mm", "cm", "px"})
-        ComboBox1.Location = New Point(256, 323)
+        ComboBox1.Location = New Point(405, 324)
         ComboBox1.Margin = New Padding(3, 4, 3, 4)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(74, 27)
+        ComboBox1.Size = New Size(74, 29)
         ComboBox1.TabIndex = 21
         ' 
         ' Button2
@@ -127,7 +128,7 @@ Partial Class Form_scale
         ListView1.Margin = New Padding(3, 4, 3, 4)
         ListView1.MultiSelect = False
         ListView1.Name = "ListView1"
-        ListView1.Size = New Size(414, 218)
+        ListView1.Size = New Size(489, 218)
         ListView1.TabIndex = 16
         ListView1.UseCompatibleStateImageBehavior = False
         ListView1.View = View.Details
@@ -140,25 +141,27 @@ Partial Class Form_scale
         ' ColumnHeader2
         ' 
         ColumnHeader2.Text = "Pixel"
+        ColumnHeader2.Width = 80
         ' 
         ' ColumnHeader3
         ' 
         ColumnHeader3.Text = "Length"
+        ColumnHeader3.Width = 80
         ' 
         ' ColumnHeader4
         ' 
         ColumnHeader4.Text = "Unit"
-        ColumnHeader4.Width = 50
+        ColumnHeader4.Width = 80
         ' 
         ' ColumnHeader5
         ' 
         ColumnHeader5.Text = "Size"
-        ColumnHeader5.Width = 50
+        ColumnHeader5.Width = 80
         ' 
         ' ColumnHeader6
         ' 
         ColumnHeader6.Text = "Radio"
-        ColumnHeader6.Width = 50
+        ColumnHeader6.Width = 80
         ' 
         ' Button3
         ' 
@@ -174,9 +177,9 @@ Partial Class Form_scale
         ' 
         Label3.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label3.AutoSize = True
-        Label3.Location = New Point(205, 328)
+        Label3.Location = New Point(317, 327)
         Label3.Name = "Label3"
-        Label3.Size = New Size(35, 19)
+        Label3.Size = New Size(44, 23)
         Label3.TabIndex = 24
         Label3.Text = "Unit"
         ' 
@@ -186,7 +189,7 @@ Partial Class Form_scale
         Label5.AutoSize = True
         Label5.Location = New Point(8, 293)
         Label5.Name = "Label5"
-        Label5.Size = New Size(93, 19)
+        Label5.Size = New Size(124, 23)
         Label5.TabIndex = 25
         Label5.Text = "Width in pixel"
         ' 
@@ -196,7 +199,7 @@ Partial Class Form_scale
         Label1.AutoSize = True
         Label1.Location = New Point(8, 328)
         Label1.Name = "Label1"
-        Label1.Size = New Size(91, 19)
+        Label1.Size = New Size(118, 23)
         Label1.TabIndex = 26
         Label1.Text = "Actual length"
         ' 
@@ -204,19 +207,19 @@ Partial Class Form_scale
         ' 
         Label2.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label2.AutoSize = True
-        Label2.Location = New Point(205, 293)
+        Label2.Location = New Point(317, 292)
         Label2.Name = "Label2"
-        Label2.Size = New Size(33, 19)
+        Label2.Size = New Size(43, 23)
         Label2.TabIndex = 27
         Label2.Text = "Size"
         ' 
         ' TextBox0
         ' 
         TextBox0.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        TextBox0.Location = New Point(51, 256)
+        TextBox0.Location = New Point(105, 258)
         TextBox0.Margin = New Padding(3, 4, 3, 4)
         TextBox0.Name = "TextBox0"
-        TextBox0.Size = New Size(142, 25)
+        TextBox0.Size = New Size(142, 29)
         TextBox0.TabIndex = 28
         ' 
         ' Label4
@@ -225,7 +228,7 @@ Partial Class Form_scale
         Label4.AutoSize = True
         Label4.Location = New Point(8, 260)
         Label4.Name = "Label4"
-        Label4.Size = New Size(34, 19)
+        Label4.Size = New Size(46, 23)
         Label4.TabIndex = 29
         Label4.Text = "Title"
         ' 
@@ -233,30 +236,30 @@ Partial Class Form_scale
         ' 
         Label6.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         Label6.AutoSize = True
-        Label6.Location = New Point(205, 260)
+        Label6.Location = New Point(317, 260)
         Label6.Name = "Label6"
-        Label6.Size = New Size(43, 19)
+        Label6.Size = New Size(57, 23)
         Label6.TabIndex = 30
         Label6.Text = "Radio"
         ' 
         ' TextBox5
         ' 
         TextBox5.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        TextBox5.Location = New Point(256, 256)
+        TextBox5.Location = New Point(405, 257)
         TextBox5.Margin = New Padding(3, 4, 3, 4)
         TextBox5.Name = "TextBox5"
         TextBox5.ReadOnly = True
-        TextBox5.Size = New Size(74, 25)
+        TextBox5.Size = New Size(74, 29)
         TextBox5.TabIndex = 31
         TextBox5.Text = "1"
         ' 
         ' TextBox4
         ' 
         TextBox4.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        TextBox4.Location = New Point(256, 290)
+        TextBox4.Location = New Point(405, 291)
         TextBox4.Margin = New Padding(3, 4, 3, 4)
         TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(74, 25)
+        TextBox4.Size = New Size(74, 29)
         TextBox4.TabIndex = 32
         TextBox4.Text = "10"
         ' 
@@ -273,11 +276,12 @@ Partial Class Form_scale
         ' MenuStrip1
         ' 
         MenuStrip1.Font = New Font("微软雅黑", 10.5F, FontStyle.Regular, GraphicsUnit.Point)
+        MenuStrip1.ImageScalingSize = New Size(20, 20)
         MenuStrip1.Items.AddRange(New ToolStripItem() {OperationToolStripMenuItem})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Padding = New Padding(7, 2, 0, 2)
-        MenuStrip1.Size = New Size(416, 28)
+        MenuStrip1.Size = New Size(491, 32)
         MenuStrip1.TabIndex = 34
         MenuStrip1.Text = "MenuStrip1"
         ' 
@@ -285,19 +289,19 @@ Partial Class Form_scale
         ' 
         OperationToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AddToolStripMenuItem, DeleteToolStripMenuItem})
         OperationToolStripMenuItem.Name = "OperationToolStripMenuItem"
-        OperationToolStripMenuItem.Size = New Size(89, 24)
+        OperationToolStripMenuItem.Size = New Size(112, 28)
         OperationToolStripMenuItem.Text = "Operation"
         ' 
         ' AddToolStripMenuItem
         ' 
         AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        AddToolStripMenuItem.Size = New Size(147, 24)
+        AddToolStripMenuItem.Size = New Size(182, 28)
         AddToolStripMenuItem.Text = "New Scale"
         ' 
         ' DeleteToolStripMenuItem
         ' 
         DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        DeleteToolStripMenuItem.Size = New Size(147, 24)
+        DeleteToolStripMenuItem.Size = New Size(182, 28)
         DeleteToolStripMenuItem.Text = "Delete"
         ' 
         ' Button1
@@ -312,9 +316,9 @@ Partial Class Form_scale
         ' 
         ' Form_scale
         ' 
-        AutoScaleDimensions = New SizeF(8F, 19F)
+        AutoScaleDimensions = New SizeF(10F, 21F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(416, 404)
+        ClientSize = New Size(491, 404)
         ControlBox = False
         Controls.Add(Button1)
         Controls.Add(Button5)
